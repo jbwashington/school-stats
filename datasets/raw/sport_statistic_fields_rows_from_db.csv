@@ -1,0 +1,167 @@
+id,sport_id,field_key,field_label,field_type,field_unit,field_description,field_step,field_min,field_max,field_category,field_order,is_active,created_at,updated_at
+201,3,points_per_game,Points Per Game,number,points,Average points per game recorded by the player,0.1,,,Scoring,0,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+202,3,field_goal_percentage,Field Goal %,percentage,%,Percentage of field goal,0.1,,100,Scoring,1,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+203,3,three_point_percentage,3-Point %,percentage,%,Percentage of 3-point,0.1,,100,Scoring,2,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+204,3,free_throw_percentage,Free Throw %,percentage,%,Percentage of free throw,0.1,,100,Scoring,3,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+205,3,assists_per_game,Assists Per Game,number,assists,Average assists per game recorded by the player,0.1,,,Playmaking,4,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+206,3,turnovers_per_game,Turnovers Per Game,number,turnovers,Average turnovers per game recorded by the player,0.1,,,Playmaking,5,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+207,3,assist_to_turnover_ratio,Assist/Turnover Ratio,number,ratio,Ratio measurement for assist/turnover ratio,0.1,,,Playmaking,6,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+208,3,rebounds_per_game,Rebounds Per Game,number,rebounds,Average rebounds per game recorded by the player,0.1,,,Rebounding,7,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+209,3,offensive_rebounds,Offensive Rebounds,number,offensive,Number of offensive rebounds recorded by the player,0.1,,,Rebounding,8,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+210,3,defensive_rebounds,Defensive Rebounds,number,defensive,Number of defensive rebounds recorded by the player,0.1,,,Rebounding,9,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+211,3,steals_per_game,Steals Per Game,number,steals,Average steals per game recorded by the player,0.1,,,Defense,10,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+212,3,blocks_per_game,Blocks Per Game,number,blocks,Average blocks per game recorded by the player,0.1,,,Defense,11,true,2025-06-08 02:40:48.639292+00,2025-06-08 02:40:48.639292+00
+229,2,batting_average,Batting Average,number,avg,Average batting average performance,0.001,,1,Hitting,0,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+230,2,on_base_percentage,On-Base %,number,%,Number of on-base % recorded by the player,0.001,,1,Hitting,1,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+231,2,slugging_percentage,Slugging %,number,%,Number of slugging % recorded by the player,0.001,,1,Hitting,2,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+232,2,home_runs,Home Runs,number,home,Number of home runs recorded by the player,,,,Hitting,3,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+233,2,rbis,RBIs,number,rbis,Number of rbis recorded by the player,,,,Hitting,4,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+234,2,stolen_bases,Stolen Bases,number,stolen,Number of stolen bases recorded by the player,,,,Hitting,5,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+235,2,era,ERA,number,era,Number of era recorded by the player,0.01,,,Pitching,6,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+236,2,whip,WHIP,number,whip,Number of whip recorded by the player,0.01,,,Pitching,7,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+237,2,strikeouts,Strikeouts,number,strikeouts,Number of strikeouts recorded by the player,,,,Pitching,8,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+238,2,walks,Walks,number,walks,Number of walks recorded by the player,,,,Pitching,9,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+239,2,wins,Wins,number,wins,Number of wins recorded by the player,,,,Pitching,10,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+240,2,saves,Saves,number,saves,Number of saves recorded by the player,,,,Pitching,11,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+241,2,fielding_percentage,Fielding %,percentage,%,Percentage of fielding,0.1,,100,Fielding,12,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+242,2,errors,Errors,number,errors,Number of errors recorded by the player,,,,Fielding,13,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+243,2,sixty_yard_dash,60-Yard Dash,time,seconds,Player's 60-yard dash,0.01,,,Speed,14,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+244,2,arm_velocity,Arm Velocity,number,mph,Number of arm velocity recorded by the player,,,,Speed,15,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+245,2,pop_time,Pop Time (C),time,seconds,Player's pop time (c),0.01,,,Speed,16,true,2025-06-08 02:40:49.184602+00,2025-06-08 02:40:49.184602+00
+246,9,batting_average,Batting Average,number,avg,Average batting average performance,0.001,,1,Hitting,0,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+247,9,on_base_percentage,On-Base %,number,%,Number of on-base % recorded by the player,0.001,,1,Hitting,1,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+248,9,slugging_percentage,Slugging %,number,%,Number of slugging % recorded by the player,0.001,,1,Hitting,2,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+249,9,home_runs,Home Runs,number,home,Number of home runs recorded by the player,,,,Hitting,3,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+250,9,rbis,RBIs,number,rbis,Number of rbis recorded by the player,,,,Hitting,4,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+251,9,stolen_bases,Stolen Bases,number,stolen,Number of stolen bases recorded by the player,,,,Hitting,5,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+252,9,era,ERA,number,era,Number of era recorded by the player,0.01,,,Pitching,6,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+253,9,whip,WHIP,number,whip,Number of whip recorded by the player,0.01,,,Pitching,7,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+254,9,strikeouts,Strikeouts,number,strikeouts,Number of strikeouts recorded by the player,,,,Pitching,8,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+255,9,walks,Walks,number,walks,Number of walks recorded by the player,,,,Pitching,9,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+256,9,wins,Wins,number,wins,Number of wins recorded by the player,,,,Pitching,10,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+257,9,fielding_percentage,Fielding %,percentage,%,Percentage of fielding,0.1,,100,Fielding,11,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+258,9,errors,Errors,number,errors,Number of errors recorded by the player,,,,Fielding,12,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+259,9,sixty_yard_dash,60-Yard Dash,time,seconds,Player's 60-yard dash,0.01,,,Speed,13,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+260,9,arm_velocity,Arm Velocity,number,mph,Number of arm velocity recorded by the player,,,,Speed,14,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+261,9,pop_time,Pop Time (C),time,seconds,Player's pop time (c),0.01,,,Speed,15,true,2025-06-08 02:40:49.451929+00,2025-06-08 02:40:49.451929+00
+262,8,goals,Goals,number,goals,Number of goals recorded by the player,,,,Offense,0,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+263,8,assists,Assists,number,assists,Number of assists recorded by the player,,,,Offense,1,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+264,8,shots_on_goal,Shots on Goal,number,shots,Number of shots on goal recorded by the player,,,,Offense,2,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+265,8,shot_accuracy,Shot Accuracy %,percentage,%,Percentage of shot accuracy,0.1,,100,Offense,3,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+266,8,saves,Saves,number,saves,Number of saves recorded by the player,,,,Goalkeeping,4,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+267,8,save_percentage,Save %,percentage,%,Percentage of save,0.1,,100,Goalkeeping,5,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+268,8,clean_sheets,Clean Sheets,number,clean,Number of clean sheets recorded by the player,,,,Goalkeeping,6,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+269,8,goals_against_average,Goals Against Avg,number,goals,Number of goals against avg recorded by the player,0.01,,,Goalkeeping,7,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+270,8,tackles,Tackles,number,tackles,Number of tackles recorded by the player,,,,Defense,8,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+271,8,interceptions,Interceptions,number,interceptions,Number of interceptions recorded by the player,,,,Defense,9,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+272,8,clearances,Clearances,number,clearances,Number of clearances recorded by the player,,,,Defense,10,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+273,8,pass_completion_rate,Pass Completion %,percentage,%,Percentage of pass completion,0.1,,100,Midfield,11,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+274,8,key_passes,Key Passes,number,key,Number of key passes recorded by the player,,,,Midfield,12,true,2025-06-08 02:40:49.736496+00,2025-06-08 02:40:49.736496+00
+275,11,100m_time,100m Time,time,seconds,Player's 100m time,0.01,,,Sprints,0,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+276,11,200m_time,200m Time,time,seconds,Player's 200m time,0.01,,,Sprints,1,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+277,11,400m_time,400m Time,time,seconds,Player's 400m time,0.01,,,Sprints,2,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+278,11,800m_time,800m Time,time,mm:ss,Player's 800m time,0.01,,,Distance,3,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+279,11,1600m_time,1600m Time,time,mm:ss,Player's 1600m time,0.01,,,Distance,4,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+280,11,3200m_time,3200m Time,time,mm:ss,Player's 3200m time,0.01,,,Distance,5,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+281,11,5k_time,5K Time,time,mm:ss,Player's 5k time,0.01,,,Distance,6,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+282,11,long_jump,Long Jump,number,feet/inches,Number of long jump recorded by the player,0.25,,,Jumps,7,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+283,11,triple_jump,Triple Jump,number,feet/inches,Number of triple jump recorded by the player,0.25,,,Jumps,8,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+284,11,high_jump,High Jump,number,feet/inches,Number of high jump recorded by the player,0.25,,,Jumps,9,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+285,11,pole_vault,Pole Vault,number,feet/inches,Number of pole vault recorded by the player,0.25,,,Jumps,10,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+286,11,shot_put,Shot Put,number,feet/inches,Number of shot put recorded by the player,0.25,,,Throws,11,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+287,11,discus,Discus,number,feet/inches,Number of discus recorded by the player,0.25,,,Throws,12,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+288,11,javelin,Javelin,number,feet/inches,Number of javelin recorded by the player,0.25,,,Throws,13,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+289,11,hammer,Hammer,number,feet/inches,Number of hammer recorded by the player,0.25,,,Throws,14,true,2025-06-08 02:40:49.980302+00,2025-06-08 02:40:49.980302+00
+290,4,5k_personal_best,5K Personal Best,time,mm:ss,Player's 5k personal best,0.01,,,Performance,0,true,2025-06-08 02:40:50.192856+00,2025-06-08 02:40:50.192856+00
+291,4,average_mile_split,Average Mile Split,time,mm:ss,Average average mile split performance,0.01,,,Performance,1,true,2025-06-08 02:40:50.192856+00,2025-06-08 02:40:50.192856+00
+292,4,season_best,Season Best,time,mm:ss,Player's season best,0.01,,,Performance,2,true,2025-06-08 02:40:50.192856+00,2025-06-08 02:40:50.192856+00
+293,4,weekly_mileage,Weekly Mileage,number,miles,Number of weekly mileage recorded by the player,,,,Training,3,true,2025-06-08 02:40:50.192856+00,2025-06-08 02:40:50.192856+00
+294,4,longest_run,Longest Run,number,miles,Number of longest run recorded by the player,0.1,,,Training,4,true,2025-06-08 02:40:50.192856+00,2025-06-08 02:40:50.192856+00
+295,4,regional_placement,Regional Placement,number,regional,Number of regional placement recorded by the player,,,,Competition,5,true,2025-06-08 02:40:50.192856+00,2025-06-08 02:40:50.192856+00
+296,4,state_placement,State Placement,number,state,Number of state placement recorded by the player,,,,Competition,6,true,2025-06-08 02:40:50.192856+00,2025-06-08 02:40:50.192856+00
+297,4,team_placement,Team Placement,number,team,Number of team placement recorded by the player,,,,Competition,7,true,2025-06-08 02:40:50.192856+00,2025-06-08 02:40:50.192856+00
+298,69,50_free,50 Free,time,mm:ss.ms,Player's 50 free,0.01,,,Freestyle,0,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+299,69,100_free,100 Free,time,mm:ss.ms,Player's 100 free,0.01,,,Freestyle,1,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+300,69,200_free,200 Free,time,mm:ss.ms,Player's 200 free,0.01,,,Freestyle,2,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+301,69,500_free,500 Free,time,mm:ss.ms,Player's 500 free,0.01,,,Freestyle,3,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+302,69,100_back,100 Back,time,mm:ss.ms,Player's 100 back,0.01,,,Backstroke,4,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+303,69,200_back,200 Back,time,mm:ss.ms,Player's 200 back,0.01,,,Backstroke,5,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+304,69,100_breast,100 Breast,time,mm:ss.ms,Player's 100 breast,0.01,,,Breaststroke,6,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+305,69,200_breast,200 Breast,time,mm:ss.ms,Player's 200 breast,0.01,,,Breaststroke,7,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+306,69,100_fly,100 Fly,time,mm:ss.ms,Player's 100 fly,0.01,,,Butterfly,8,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+307,69,200_fly,200 Fly,time,mm:ss.ms,Player's 200 fly,0.01,,,Butterfly,9,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+308,69,200_im,200 IM,time,mm:ss.ms,Player's 200 im,0.01,,,Individual Medley,10,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+309,69,400_im,400 IM,time,mm:ss.ms,Player's 400 im,0.01,,,Individual Medley,11,true,2025-06-08 02:40:50.45937+00,2025-06-08 02:40:50.45937+00
+310,10,utr_rating,UTR Rating,number,rating,Rating score for utr rating,0.01,,,Performance,0,true,2025-06-08 02:40:50.684432+00,2025-06-08 02:40:50.684432+00
+311,10,usta_ranking,USTA Ranking,number,usta,Number of usta ranking recorded by the player,,,,Performance,1,true,2025-06-08 02:40:50.684432+00,2025-06-08 02:40:50.684432+00
+312,10,singles_record,Singles W-L Record,text,,Player's singles w-l record,,,,Performance,2,true,2025-06-08 02:40:50.684432+00,2025-06-08 02:40:50.684432+00
+313,10,doubles_record,Doubles W-L Record,text,,Player's doubles w-l record,,,,Performance,3,true,2025-06-08 02:40:50.684432+00,2025-06-08 02:40:50.684432+00
+314,10,serve_speed,Serve Speed,number,mph,Number of serve speed recorded by the player,,,,Technical,4,true,2025-06-08 02:40:50.684432+00,2025-06-08 02:40:50.684432+00
+315,10,first_serve_percentage,First Serve %,percentage,%,Percentage of first serve,0.1,,100,Technical,5,true,2025-06-08 02:40:50.684432+00,2025-06-08 02:40:50.684432+00
+316,10,break_point_conversion,Break Point Conversion %,percentage,%,Percentage of break point conversion,0.1,,100,Technical,6,true,2025-06-08 02:40:50.684432+00,2025-06-08 02:40:50.684432+00
+317,12,kills_per_set,Kills Per Set,number,kills,Number of kills per set recorded by the player,0.1,,,Attacking,0,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+318,12,hitting_percentage,Hitting %,percentage,%,Percentage of hitting,0.1,,100,Attacking,1,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+319,12,attack_errors,Attack Errors,number,attack,Number of attack errors recorded by the player,,,,Attacking,2,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+320,12,assists_per_set,Assists Per Set,number,assists,Number of assists per set recorded by the player,0.1,,,Setting,3,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+321,12,setting_percentage,Setting %,percentage,%,Percentage of setting,0.1,,100,Setting,4,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+322,12,digs_per_set,Digs Per Set,number,digs,Number of digs per set recorded by the player,0.1,,,Defense,5,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+323,12,blocks_per_set,Blocks Per Set,number,blocks,Number of blocks per set recorded by the player,0.1,,,Defense,6,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+324,12,serve_receive_rating,Serve Receive Rating,number,rating,Rating score for serve receive rating,0.1,,,Defense,7,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+325,12,aces_per_set,Aces Per Set,number,aces,Number of aces per set recorded by the player,0.1,,,Serving,8,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+326,12,service_errors,Service Errors,number,service,Number of service errors recorded by the player,,,,Serving,9,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+327,12,serve_percentage,Serve %,percentage,%,Percentage of serve,0.1,,100,Serving,10,true,2025-06-08 02:40:50.930186+00,2025-06-08 02:40:50.930186+00
+328,15,wins,Wins,number,wins,Number of wins recorded by the player,,,,Record,0,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+329,15,losses,Losses,number,losses,Number of losses recorded by the player,,,,Record,1,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+330,15,pins,Pins,number,pins,Number of pins recorded by the player,,,,Record,2,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+331,15,tech_falls,Tech Falls,number,tech,Number of tech falls recorded by the player,,,,Record,3,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+332,15,takedowns,Takedowns,number,takedowns,Number of takedowns recorded by the player,,,,Performance,4,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+333,15,escapes,Escapes,number,escapes,Number of escapes recorded by the player,,,,Performance,5,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+334,15,reversals,Reversals,number,reversals,Number of reversals recorded by the player,,,,Performance,6,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+335,15,near_falls,Near Falls,number,near,Number of near falls recorded by the player,,,,Performance,7,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+336,15,weight_class,Weight Class,number,lbs,Number of weight class recorded by the player,,,,Competition,8,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+337,15,regional_placement,Regional Placement,number,regional,Number of regional placement recorded by the player,,,,Competition,9,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+338,15,state_placement,State Placement,number,state,Number of state placement recorded by the player,,,,Competition,10,true,2025-06-08 02:40:51.126947+00,2025-06-08 02:40:51.126947+00
+339,7,handicap_index,Handicap Index,number,handicap,Number of handicap index recorded by the player,0.1,,,Scoring,0,true,2025-06-08 02:40:51.411036+00,2025-06-08 02:40:51.411036+00
+340,7,nine_hole_average,9-Hole Average,number,avg,Average 9-hole average performance,0.1,,,Scoring,1,true,2025-06-08 02:40:51.411036+00,2025-06-08 02:40:51.411036+00
+341,7,eighteen_hole_average,18-Hole Average,number,avg,Average 18-hole average performance,0.1,,,Scoring,2,true,2025-06-08 02:40:51.411036+00,2025-06-08 02:40:51.411036+00
+342,7,tournament_low_round,Tournament Low Round,number,tournament,Number of tournament low round recorded by the player,,,,Scoring,3,true,2025-06-08 02:40:51.411036+00,2025-06-08 02:40:51.411036+00
+343,7,driving_distance,Driving Distance,number,yards,Number of driving distance recorded by the player,,,,Performance,4,true,2025-06-08 02:40:51.411036+00,2025-06-08 02:40:51.411036+00
+344,7,fairways_hit_percentage,Fairways Hit %,percentage,%,Percentage of fairways hit,0.1,,100,Performance,5,true,2025-06-08 02:40:51.411036+00,2025-06-08 02:40:51.411036+00
+345,7,greens_in_regulation,Greens in Regulation %,percentage,%,Percentage of greens in regulation,0.1,,100,Performance,6,true,2025-06-08 02:40:51.411036+00,2025-06-08 02:40:51.411036+00
+346,7,putting_average,Putting Average,number,avg,Average putting average performance,0.01,,,Performance,7,true,2025-06-08 02:40:51.411036+00,2025-06-08 02:40:51.411036+00
+353,13,goals,Goals,number,goals,Number of goals recorded by the player,,,,Offense,0,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+354,13,assists,Assists,number,assists,Number of assists recorded by the player,,,,Offense,1,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+355,13,points,Points,number,points,Number of points recorded by the player,,,,Offense,2,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+356,13,shots,Shots,number,shots,Number of shots recorded by the player,,,,Offense,3,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+357,13,shot_percentage,Shot %,percentage,%,Percentage of shot,0.1,,100,Offense,4,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+358,13,ground_balls,Ground Balls,number,ground,Number of ground balls recorded by the player,,,,Defense,5,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+359,13,caused_turnovers,Caused Turnovers,number,caused,Number of caused turnovers recorded by the player,,,,Defense,6,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+360,13,checks,Checks,number,checks,Number of checks recorded by the player,,,,Defense,7,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+361,13,saves,Saves,number,saves,Number of saves recorded by the player,,,,Goalkeeping,8,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+362,13,save_percentage,Save %,percentage,%,Percentage of save,0.1,,100,Goalkeeping,9,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+363,13,goals_against_average,Goals Against Avg,number,goals,Number of goals against avg recorded by the player,0.01,,,Goalkeeping,10,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+364,13,clearing_percentage,Clearing %,percentage,%,Percentage of clearing,0.1,,100,Goalkeeping,11,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+365,13,faceoff_wins,Faceoff Wins,number,faceoff,Number of faceoff wins recorded by the player,,,,Faceoffs,12,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+366,13,faceoff_percentage,Faceoff %,percentage,%,Percentage of faceoff,0.1,,100,Faceoffs,13,true,2025-06-08 02:40:51.851072+00,2025-06-08 02:40:51.851072+00
+367,25,goals,Goals,number,goals,Number of goals recorded by the player,,,,Offense,0,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+368,25,assists,Assists,number,assists,Number of assists recorded by the player,,,,Offense,1,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+369,25,points,Points,number,points,Number of points recorded by the player,,,,Offense,2,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+370,25,plus_minus,Plus/Minus,number,plus/minus,Number of plus/minus recorded by the player,,,,Offense,3,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+371,25,power_play_goals,Power Play Goals,number,power,Number of power play goals recorded by the player,,,,Offense,4,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+372,25,saves,Saves,number,saves,Number of saves recorded by the player,,,,Goalkeeping,5,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+373,25,save_percentage,Save %,percentage,%,Percentage of save,0.1,,100,Goalkeeping,6,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+374,25,goals_against_average,Goals Against Avg,number,goals,Number of goals against avg recorded by the player,0.01,,,Goalkeeping,7,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+375,25,shutouts,Shutouts,number,shutouts,Number of shutouts recorded by the player,,,,Goalkeeping,8,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+376,25,penalty_minutes,Penalty Minutes,number,seconds,Number of penalty minutes recorded by the player,,,,Other,9,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+377,25,faceoff_percentage,Faceoff %,percentage,%,Percentage of faceoff,0.1,,100,Other,10,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+378,25,hits,Hits,number,hits,Number of hits recorded by the player,,,,Other,11,true,2025-06-08 02:40:52.072152+00,2025-06-08 02:40:52.072152+00
+379,5,rank_tier,Rank/Tier,text,,Player's rank/tier,,,,Performance,0,true,2025-06-08 02:40:52.308253+00,2025-06-08 02:40:52.308253+00
+380,5,kd_ratio,K/D Ratio,number,ratio,Ratio measurement for k/d ratio,0.01,,,Performance,1,true,2025-06-08 02:40:52.308253+00,2025-06-08 02:40:52.308253+00
+381,5,win_percentage,Win %,percentage,%,Percentage of win,0.1,,100,Performance,2,true,2025-06-08 02:40:52.308253+00,2025-06-08 02:40:52.308253+00
+382,5,average_score,Average Score,number,avg,Average average score performance,,,,Performance,3,true,2025-06-08 02:40:52.308253+00,2025-06-08 02:40:52.308253+00
+383,5,tournament_wins,Tournament Wins,number,tournament,Number of tournament wins recorded by the player,,,,Competition,4,true,2025-06-08 02:40:52.308253+00,2025-06-08 02:40:52.308253+00
+384,5,tournament_placements,Tournament Placements,text,,Player's tournament placements,,,,Competition,5,true,2025-06-08 02:40:52.308253+00,2025-06-08 02:40:52.308253+00
+385,5,team_role,Team Role,text,,Player's team role,,,,Competition,6,true,2025-06-08 02:40:52.308253+00,2025-06-08 02:40:52.308253+00
+386,5,twitch_followers,Twitch Followers,number,twitch,Number of twitch followers recorded by the player,,,,Streaming,7,true,2025-06-08 02:40:52.308253+00,2025-06-08 02:40:52.308253+00
+387,5,youtube_subscribers,YouTube Subscribers,number,youtube,Number of youtube subscribers recorded by the player,,,,Streaming,8,true,2025-06-08 02:40:52.308253+00,2025-06-08 02:40:52.308253+00
+388,5,average_viewers,Average Viewers,number,avg,Average average viewers performance,,,,Streaming,9,true,2025-06-08 02:40:52.308253+00,2025-06-08 02:40:52.308253+00

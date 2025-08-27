@@ -1,0 +1,328 @@
+id,sport_id,field_key,field_label,field_type,field_unit,field_description,field_step,field_min,field_max,field_category,field_order,position,is_active,created_at,updated_at
+1,1,performance_score,Performance Score,decimal,score,Overall performance rating,0.1,0,100,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+2,1,competitions_attended,Competitions,number,comps,Competitions participated in,1,0,50,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+3,1,superior_ratings,Superior Ratings,number,ratings,Superior ratings earned,1,0,20,Awards,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+4,1,solo_performances,Solo Performances,number,solos,Solo performances given,1,0,25,Performance,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+5,1,ensemble_performances,Ensemble Performances,number,ensembles,Ensemble performances,1,0,50,Performance,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+6,2,batting_average,Batting Average,decimal,avg,Percentage of at-bats resulting in a hit,0.001,0,1.000,Batting,0,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+7,2,home_runs,Home Runs,number,HR,Total home runs hit by the player,1,0,100,Batting,1,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+8,2,runs_batted_in,RBIs,number,RBI,Runs batted in by the player,1,0,200,Batting,2,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+9,2,runs_scored,Runs,number,R,Total runs scored by the player,1,0,200,Batting,3,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+10,2,hits,Hits,number,H,Total base hits by the player,1,0,300,Batting,4,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+11,2,stolen_bases,Stolen Bases,number,SB,Total stolen bases by the player,1,0,100,Batting,5,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+12,2,on_base_percentage,On Base %,percentage,%,Percentage of plate appearances reaching base,0.001,0,100,Batting,6,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+13,2,slugging_percentage,Slugging %,percentage,%,Total bases divided by at-bats,0.001,0,400,Batting,7,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+14,2,earned_run_average,ERA,decimal,ERA,Average earned runs allowed per 9 innings,0.01,0,20.00,Pitching,0,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+15,2,wins,Wins,number,W,Total games won as pitcher,1,0,50,Pitching,1,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+16,2,strikeouts,Strikeouts,number,K,Total batters struck out,1,0,500,Pitching,2,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+17,2,innings_pitched,Innings Pitched,decimal,IP,Total innings pitched,0.1,0,300,Pitching,3,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+18,2,saves,Saves,number,SV,Games finished preserving a lead,1,0,50,Pitching,4,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+19,2,fielding_percentage,Fielding %,percentage,%,Successful fielding plays without errors,0.001,0,100,Fielding,0,Fielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+20,2,put_outs,Put Outs,number,PO,Total defensive outs recorded,1,0,500,Fielding,1,Fielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+21,2,assists,Assists,number,A,Defensive plays helping record an out,1,0,300,Fielding,2,Fielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+22,2,errors,Errors,number,E,Fielding mistakes allowing runners to advance,1,0,50,Fielding,3,Fielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+23,3,points_per_game,Points Per Game,decimal,PPG,Average points scored per game,0.1,0,50,Scoring,0,Guard,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+24,3,field_goal_percentage,Field Goal %,percentage,%,Percentage of field goals made,0.1,0,100,Scoring,1,Forward,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+25,3,three_point_percentage,3-Point %,percentage,%,Percentage of 3-point shots made,0.1,0,100,Scoring,2,Guard,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+26,3,free_throw_percentage,Free Throw %,percentage,%,Percentage of free throws made,0.1,0,100,Scoring,3,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+27,3,rebounds_per_game,Rebounds Per Game,decimal,RPG,Average rebounds per game,0.1,0,25,Rebounding,0,Center,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+28,3,assists_per_game,Assists Per Game,decimal,APG,Average assists per game,0.1,0,20,Playmaking,0,Guard,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+29,3,steals_per_game,Steals Per Game,decimal,SPG,Average steals per game,0.1,0,10,Defense,0,Guard,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+30,3,blocks_per_game,Blocks Per Game,decimal,BPG,Average blocks per game,0.1,0,10,Defense,1,Center,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+31,3,turnovers_per_game,Turnovers Per Game,decimal,TPG,Average turnovers per game,0.1,0,10,Ball Handling,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+32,4,time_5k,5K Time,time,mm:ss,Time for 5 kilometer race,0.01,12:00,40:00,Distance,0,Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+33,4,time_3_mile,3 Mile Time,time,mm:ss,Time for 3 mile race,0.01,12:00,35:00,Distance,1,Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+34,4,time_2_mile,2 Mile Time,time,mm:ss,Time for 2 mile race,0.01,8:00,25:00,Distance,2,Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+35,4,place_finish,Place,number,place,Finishing position in race,1,1,500,Performance,0,Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+36,4,team_score,Team Score,number,points,Team points in meet,1,0,500,Team,0,Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+37,5,kills_per_game,K/D Ratio,decimal,ratio,Kills to deaths ratio,0.01,0,50,Performance,0,Player,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+38,5,wins,Wins,number,W,Total match wins,1,0,100,Record,0,Player,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+39,5,losses,Losses,number,L,Total match losses,1,0,100,Record,1,Player,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+40,5,win_percentage,Win %,percentage,%,Percentage of matches won,0.1,0,100,Record,2,Player,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+41,5,mvp_awards,MVP Awards,number,MVPs,Match MVP awards earned,1,0,50,Awards,0,Player,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+42,6,goals,Goals,number,G,Total goals scored,1,0,100,Scoring,0,Forward,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+43,6,assists,Assists,number,A,Assists on goals,1,0,75,Scoring,1,Midfielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+44,6,shots,Shots,number,shots,Total shot attempts,1,0,300,Scoring,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+45,6,shots_on_goal,Shots on Goal,number,SOG,Shots requiring save,1,0,200,Scoring,3,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+46,6,defensive_saves,Defensive Saves,number,DS,Defensive stops made,1,0,150,Defense,0,Defender,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+47,6,penalty_corners,Penalty Corners,number,PC,Penalty corners earned,1,0,50,Specialty,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+48,6,green_cards,Green Cards,number,GC,Warning cards received,1,0,10,Discipline,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+49,6,yellow_cards,Yellow Cards,number,YC,Caution cards received,1,0,10,Discipline,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+50,6,saves,Saves,number,saves,Goalkeeper saves,1,0,300,Goalkeeping,0,Goalkeeper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+51,6,save_percentage,Save %,percentage,%,Percentage of shots saved,0.1,0,100,Goalkeeping,1,Goalkeeper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+52,7,touchdowns,Touchdowns,number,TD,Total touchdowns scored,1,0,50,Scoring,0,Running Back,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+53,7,passing_yards,Passing Yards,number,yards,Total passing yards,1,-100,1000,Passing,0,Quarterback,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+54,7,passing_touchdowns,Passing TDs,number,TD,Touchdown passes,1,0,50,Passing,1,Quarterback,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+55,7,rushing_yards,Rushing Yards,number,yards,Total rushing yards,1,-100,1000,Rushing,0,Running Back,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+56,7,receptions,Receptions,number,rec,Total receptions,1,0,150,Receiving,0,Wide Receiver,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+57,7,receiving_yards,Receiving Yards,number,yards,Total receiving yards,1,0,1500,Receiving,1,Wide Receiver,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+58,7,interceptions,Interceptions,number,INT,Defensive interceptions,1,0,20,Defense,0,Defensive Back,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+59,7,flag_pulls,Flag Pulls,number,pulls,Defensive flag pulls,1,0,200,Defense,1,Defender,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+60,7,sacks,Sacks,number,sacks,Quarterback sacks,1,0,30,Defense,2,Rusher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+61,8,passing_yards,Passing Yards,number,yards,Total yards gained through passing,1,-100,5000,Passing,0,Quarterback,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+62,8,passing_touchdowns,Passing TDs,number,TD,Touchdown passes thrown,1,0,75,Passing,1,Quarterback,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+63,8,passing_attempts,Pass Attempts,number,att,Total pass attempts,1,0,700,Passing,2,Quarterback,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+64,8,passing_completions,Completions,number,comp,Successful pass completions,1,0,500,Passing,3,Quarterback,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+65,8,completion_percentage,Completion %,percentage,%,Percentage of passes completed,0.1,0,100,Passing,4,Quarterback,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+66,8,interceptions_thrown,Interceptions,number,INT,Passes intercepted by defense,1,0,50,Passing,5,Quarterback,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+67,8,rushing_yards,Rushing Yards,number,yards,Total yards gained rushing,1,-200,2500,Rushing,0,Running Back,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+68,8,rushing_touchdowns,Rushing TDs,number,TD,Touchdowns scored rushing,1,0,50,Rushing,1,Running Back,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+69,8,rushing_attempts,Rush Attempts,number,att,Total rushing attempts,1,0,500,Rushing,2,Running Back,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+70,8,yards_per_carry,Yards Per Carry,decimal,avg,Average yards per rushing attempt,0.1,-10,20,Rushing,3,Running Back,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+71,8,receiving_yards,Receiving Yards,number,yards,Total yards on receptions,1,0,2000,Receiving,0,Wide Receiver,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+72,8,receiving_touchdowns,Receiving TDs,number,TD,Touchdowns on receptions,1,0,30,Receiving,1,Wide Receiver,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+73,8,receptions,Receptions,number,rec,Total passes caught,1,0,150,Receiving,2,Wide Receiver,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+74,8,tackles,Tackles,number,tackles,Total defensive tackles,1,0,200,Defense,0,Linebacker,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+75,8,sacks,Sacks,number,sacks,QB tackles behind line of scrimmage,1,0,30,Defense,1,Defensive End,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+76,8,interceptions,Interceptions,number,INT,Passes intercepted on defense,1,0,15,Defense,2,Defensive Back,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+77,8,fumbles_forced,Forced Fumbles,number,FF,Fumbles caused by defensive play,1,0,10,Defense,3,Defender,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+78,8,field_goals,Field Goals Made,number,FG,Successful field goal kicks,1,0,50,Special Teams,0,Kicker,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+79,8,field_goal_attempts,FG Attempts,number,FGA,Total field goal attempts,1,0,60,Special Teams,1,Kicker,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+80,9,stroke_average,Stroke Average,decimal,strokes,Average strokes per round,0.01,65,100,Scoring,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+81,9,rounds_played,Rounds Played,number,rounds,Total rounds played,1,0,50,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+82,9,lowest_round,Lowest Round,number,strokes,Best single round score,1,60,100,Scoring,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+83,9,birdies,Birdies,number,birdies,Total birdies made,1,0,100,Scoring,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+84,9,eagles,Eagles,number,eagles,Total eagles made,1,0,20,Scoring,3,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+85,9,pars,Pars,number,pars,Total pars made,1,0,500,Scoring,4,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+86,10,all_around,All-Around,decimal,score,Combined apparatus score,0.1,0,100,Overall,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+87,10,floor_exercise,Floor Exercise,decimal,score,Floor routine score,0.1,0,20,Apparatus,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+88,10,pommel_horse,Pommel Horse,decimal,score,Pommel horse score,0.1,0,20,Apparatus,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+89,10,still_rings,Still Rings,decimal,score,Rings routine score,0.1,0,20,Apparatus,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+90,10,vault,Vault,decimal,score,Vault score,0.1,0,20,Apparatus,3,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+91,10,parallel_bars,Parallel Bars,decimal,score,Parallel bars score,0.1,0,20,Apparatus,4,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+92,10,horizontal_bar,Horizontal Bar,decimal,score,High bar score,0.1,0,20,Apparatus,5,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+93,10,balance_beam,Balance Beam,decimal,score,Beam routine score,0.1,0,20,Apparatus,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+94,10,uneven_bars,Uneven Bars,decimal,score,Bars routine score,0.1,0,20,Apparatus,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+95,11,goals,Goals,number,G,Total goals scored,1,0,150,Scoring,0,Forward,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+96,11,assists,Assists,number,A,Assists on goals,1,0,100,Scoring,1,Center,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+97,11,points,Points,number,Pts,Total points (G+A),1,0,250,Scoring,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+98,11,plus_minus,Plus/Minus,number,+/-,Goal differential when on ice,1,-100,100,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+99,11,penalty_minutes,Penalty Minutes,number,PIM,Minutes in penalties,1,0,300,Discipline,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+100,11,power_play_goals,Power Play Goals,number,PPG,Goals on power play,1,0,50,Special Teams,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+101,11,wins,Wins,number,W,Goalie wins,1,0,50,Goaltending,0,Goaltender,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+102,11,save_percentage,Save %,percentage,%,Percentage of shots saved,0.001,0,100,Goaltending,1,Goaltender,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+103,11,goals_against_average,GAA,decimal,GAA,Goals against average,0.01,0,10,Goaltending,2,Goaltender,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+104,12,matches_won,Matches Won,number,W,Total matches won,1,0,100,Record,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+105,12,matches_lost,Matches Lost,number,L,Total matches lost,1,0,100,Record,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+106,12,ippon,Ippon,number,ippon,Full point victories,1,0,50,Scoring,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+107,12,waza_ari,Waza-ari,number,waza,Half point scores,1,0,100,Scoring,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+108,12,yuko,Yuko,number,yuko,Minor scores,1,0,150,Scoring,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+109,12,shido,Shido,number,penalties,Penalties received,1,0,20,Discipline,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+110,13,goals,Goals,number,G,Total goals scored,1,0,150,Scoring,0,Attackman,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+111,13,assists,Assists,number,A,Assists on goals,1,0,100,Scoring,1,Midfielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+112,13,ground_balls,Ground Balls,number,GB,Ground balls collected,1,0,200,Defense,0,Defender,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+113,13,caused_turnovers,Caused Turnovers,number,CT,Turnovers forced,1,0,100,Defense,1,Defender,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+114,13,face_off_wins,Face-off Wins,number,FOW,Face-offs won,1,0,300,Specialty,0,FOGO,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+115,13,saves,Saves,number,saves,Goalie saves made,1,0,400,Goalkeeping,0,Goalie,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+116,13,save_percentage,Save %,percentage,%,Percentage of shots saved,0.1,0,100,Goalkeeping,1,Goalie,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+117,13,goals_against_average,Goals Against Avg,decimal,GAA,Average goals allowed,0.01,0,25,Goalkeeping,2,Goalie,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+118,14,tries,Tries,number,tries,Touchdowns scored,1,0,50,Scoring,0,Back,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+119,14,conversions,Conversions,number,conv,Successful conversions,1,0,50,Scoring,1,Fly-half,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+120,14,penalty_goals,Penalty Goals,number,PG,Penalty kicks made,1,0,30,Scoring,2,Fly-half,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+121,14,tackles_made,Tackles Made,number,tackles,Defensive tackles completed,1,0,300,Defense,0,Forward,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+122,14,lineouts_won,Lineouts Won,number,lineouts,Lineouts secured,1,0,100,Set Piece,0,Lock,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+123,14,scrums_won,Scrums Won,number,scrums,Scrums secured,1,0,100,Set Piece,1,Prop,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+124,14,yellow_cards,Yellow Cards,number,YC,Cautions received,1,0,5,Discipline,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+125,14,red_cards,Red Cards,number,RC,Ejections received,1,0,2,Discipline,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+126,15,giant_slalom_time,Giant Slalom Time,time,seconds,Time for giant slalom run,0.01,45,180,Alpine,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+127,15,slalom_time,Slalom Time,time,seconds,Time for slalom run,0.01,40,150,Alpine,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+128,15,super_g_time,Super-G Time,time,seconds,Time for super-G run,0.01,60,200,Alpine,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+129,15,halfpipe_score,Halfpipe Score,decimal,points,Score in halfpipe competition,0.1,0,100,Snowboard,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+130,15,slopestyle_score,Slopestyle Score,decimal,points,Score in slopestyle event,0.1,0,100,Snowboard,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+131,15,cross_time,Cross Time,time,seconds,Time for cross event,0.01,60,300,Cross,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+132,16,goals,Goals,number,G,Total goals scored,1,0,100,Scoring,0,Forward,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+133,16,assists,Assists,number,A,Passes leading to goals,1,0,75,Scoring,1,Midfielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+134,16,points,Points,number,Pts,Total points (goals + assists),1,0,175,Scoring,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+135,16,shots,Shots,number,Sh,Total shot attempts,1,0,300,Scoring,3,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+136,16,shots_on_goal,Shots on Goal,number,SOG,Shots requiring a save,1,0,200,Scoring,4,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+137,16,saves,Saves,number,saves,Goalkeeper saves made,1,0,400,Goalkeeping,0,Goalkeeper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+138,16,goals_against_average,Goals Against Avg,decimal,GAA,Average goals allowed per game,0.01,0,10,Goalkeeping,1,Goalkeeper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+139,16,save_percentage,Save %,percentage,%,Percentage of shots saved,0.1,0,100,Goalkeeping,2,Goalkeeper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+140,16,shutouts,Shutouts,number,SO,Games with no goals allowed,1,0,20,Goalkeeping,3,Goalkeeper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+141,16,yellow_cards,Yellow Cards,number,YC,Cautions received,1,0,10,Discipline,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+142,16,red_cards,Red Cards,number,RC,Ejections from game,1,0,3,Discipline,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+143,17,batting_average,Batting Average,decimal,avg,Hits divided by at-bats,0.001,0,1.000,Batting,0,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+144,17,home_runs,Home Runs,number,HR,Total home runs hit,1,0,50,Batting,1,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+145,17,runs_batted_in,RBIs,number,RBI,Runs batted in,1,0,150,Batting,2,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+146,17,stolen_bases,Stolen Bases,number,SB,Bases stolen,1,0,75,Batting,3,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+147,17,earned_run_average,ERA,decimal,ERA,Earned runs per 9 innings,0.01,0,10,Pitching,0,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+148,17,wins,Wins,number,W,Games won as pitcher,1,0,30,Pitching,1,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+149,17,strikeouts,Strikeouts,number,K,Batters struck out,1,0,300,Pitching,2,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+150,17,fielding_percentage,Fielding %,percentage,%,Successful fielding plays,0.001,0,100,Fielding,0,Fielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+151,18,time_50_free,50 Free,time,seconds,Time for 50y freestyle,0.01,18,40,Sprint,0,Swimmer,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+152,18,time_100_free,100 Free,time,seconds,Time for 100y freestyle,0.01,40,90,Sprint,1,Swimmer,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+153,18,time_200_free,200 Free,time,mm:ss.ss,Time for 200y freestyle,0.01,1:30,3:00,Distance,0,Swimmer,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+154,18,time_500_free,500 Free,time,mm:ss.ss,Time for 500y freestyle,0.01,4:00,8:00,Distance,1,Swimmer,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+155,18,time_100_back,100 Back,time,seconds,Time for 100y backstroke,0.01,45,120,Stroke,0,Swimmer,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+156,18,time_100_breast,100 Breast,time,seconds,Time for 100y breaststroke,0.01,50,120,Stroke,1,Swimmer,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+157,18,time_100_fly,100 Fly,time,seconds,Time for 100y butterfly,0.01,45,120,Stroke,2,Swimmer,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+158,18,time_200_im,200 IM,time,mm:ss.ss,Time for 200y individual medley,0.01,1:40,3:30,Medley,0,Swimmer,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+159,18,relay_points,Relay Points,number,points,Points from relay events,1,0,100,Team,0,Swimmer,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+160,19,singles_wins,Singles Wins,number,W,Singles matches won,1,0,50,Singles,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+161,19,singles_losses,Singles Losses,number,L,Singles matches lost,1,0,50,Singles,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+162,19,doubles_wins,Doubles Wins,number,W,Doubles matches won,1,0,50,Doubles,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+163,19,doubles_losses,Doubles Losses,number,L,Doubles matches lost,1,0,50,Doubles,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+164,19,sets_won,Sets Won,number,sets,Total sets won,1,0,150,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+165,19,sets_lost,Sets Lost,number,sets,Total sets lost,1,0,150,Performance,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+166,19,games_won,Games Won,number,games,Total games won,1,0,500,Performance,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+167,19,games_lost,Games Lost,number,games,Total games lost,1,0,500,Performance,3,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+168,20,time_100m,100m Time,time,seconds,Time for 100 meter dash,0.01,9.5,20,Sprint,0,Sprinter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+169,20,time_200m,200m Time,time,seconds,Time for 200 meter dash,0.01,19,40,Sprint,1,Sprinter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+170,20,time_400m,400m Time,time,seconds,Time for 400 meter dash,0.01,43,90,Sprint,2,Sprinter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+171,20,time_800m,800m Time,time,mm:ss,Time for 800 meter run,0.01,1:40,3:30,Distance,0,Distance Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+172,20,time_1600m,1600m Time,time,mm:ss,Time for 1600 meter run,0.01,3:40,7:00,Distance,1,Distance Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+173,20,time_3200m,3200m Time,time,mm:ss,Time for 3200 meter run,0.01,8:00,15:00,Distance,2,Distance Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+174,20,time_110m_hurdles,110m Hurdles,time,seconds,Time for 110m hurdles,0.01,12.8,25,Hurdles,0,Hurdler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+175,20,time_300m_hurdles,300m Hurdles,time,seconds,Time for 300m hurdles,0.01,35,60,Hurdles,1,Hurdler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+176,20,high_jump,High Jump,distance,feet-inches,Height cleared in high jump,0.25,3,8,Jumps,0,Jumper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+177,20,pole_vault,Pole Vault,distance,feet-inches,Height cleared in pole vault,0.25,6,20,Jumps,1,Vaulter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+178,20,long_jump,Long Jump,distance,feet-inches,Distance in long jump,0.25,10,30,Jumps,2,Jumper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+179,20,triple_jump,Triple Jump,distance,feet-inches,Distance in triple jump,0.25,20,60,Jumps,3,Jumper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+180,20,shot_put,Shot Put,distance,feet-inches,Distance thrown in shot put,0.25,20,80,Throws,0,Thrower,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+181,20,discus,Discus,distance,feet,Distance thrown in discus,0.5,50,250,Throws,1,Thrower,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+182,20,javelin,Javelin,distance,feet,Distance thrown in javelin,0.5,50,300,Throws,2,Thrower,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+183,20,relay_4x100,4x100 Relay,time,seconds,Time for 4x100m relay,0.01,38,60,Relays,0,Relay Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+184,20,relay_4x400,4x400 Relay,time,mm:ss,Time for 4x400m relay,0.01,2:50,4:30,Relays,1,Relay Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+185,21,kills,Kills,number,K,Attack resulting in point,1,0,500,Offense,0,Outside Hitter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+186,21,hitting_percentage,Hitting %,percentage,%,Kill success rate,0.001,-100,100,Offense,1,Middle Blocker,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+187,21,assists,Assists,number,A,Sets resulting in kills,1,0,1000,Offense,2,Setter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+188,21,aces,Aces,number,SA,Service aces,1,0,100,Serving,0,Server,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+189,21,service_errors,Service Errors,number,SE,Failed serves,1,0,50,Serving,1,Server,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+190,21,digs,Digs,number,D,Defensive saves,1,0,500,Defense,0,Libero,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+191,21,blocks,Blocks,number,B,Successful blocks at net,1,0,200,Defense,1,Middle Blocker,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+192,21,block_assists,Block Assists,number,BA,Assisted blocks,1,0,150,Defense,2,Blocker,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+193,22,goals,Goals,number,G,Total goals scored,1,0,100,Scoring,0,Attacker,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+194,22,assists,Assists,number,A,Assists on goals,1,0,75,Scoring,1,Center,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+195,22,steals,Steals,number,ST,Balls stolen from opponent,1,0,150,Defense,0,Defender,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+196,22,exclusions,Exclusions,number,EX,Major fouls committed,1,0,20,Discipline,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+197,22,saves,Saves,number,saves,Goalkeeper saves,1,0,300,Goalkeeping,0,Goalkeeper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+198,22,save_percentage,Save %,percentage,%,Percentage of shots saved,0.1,0,100,Goalkeeping,1,Goalkeeper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+199,22,five_meter_goals,5-Meter Goals,number,5M,Penalty shots made,1,0,50,Specialty,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+200,22,sprints_won,Sprints Won,number,SW,Sprint possessions won,1,0,100,Specialty,1,Sprinter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+201,23,takedowns,Takedowns,number,TD,Successful takedowns,1,0,100,Offense,0,Wrestler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+202,23,pins,Pins,number,pins,Match-ending pins,1,0,30,Offense,1,Wrestler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+203,23,escapes,Escapes,number,E,Successful escapes,1,0,50,Defense,0,Wrestler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+204,23,reversals,Reversals,number,R,Position reversals,1,0,50,Defense,1,Wrestler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+205,23,wins,Wins,number,W,Total match wins,1,0,60,Record,0,Wrestler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+206,23,losses,Losses,number,L,Total match losses,1,0,30,Record,1,Wrestler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+207,24,matches_won,Matches Won,number,W,Singles matches won,1,0,50,Singles,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+208,24,matches_lost,Matches Lost,number,L,Singles matches lost,1,0,50,Singles,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+209,24,games_won,Games Won,number,games,Total games won,1,0,300,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+210,24,games_lost,Games Lost,number,games,Total games lost,1,0,300,Performance,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+211,24,tournaments_played,Tournaments,number,tourn,Tournaments entered,1,0,20,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+212,25,set_points,Set Points,number,pts,Points in set play,1,0,500,Scoring,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+213,25,kills,Kills,number,K,Attack kills made,1,0,300,Offense,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+214,25,blocks,Blocks,number,B,Successful blocks,1,0,100,Defense,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+215,25,digs,Digs,number,D,Defensive digs made,1,0,400,Defense,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+216,25,aces,Aces,number,A,Service aces,1,0,75,Serving,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+217,25,side_outs,Side Outs,number,SO,Side out wins,1,0,200,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+218,26,average,Average,decimal,avg,Bowling average score,0.1,0,300,Scoring,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+219,26,high_game,High Game,number,score,Highest single game,1,0,300,Scoring,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+220,26,high_series,High Series,number,score,Highest 3-game series,1,0,900,Scoring,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+221,26,strikes,Strikes,number,strikes,Total strikes bowled,1,0,500,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+222,26,spares,Spares,number,spares,Total spares converted,1,0,300,Performance,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+223,26,games_bowled,Games Bowled,number,games,Total games bowled,1,0,100,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+224,27,touches,Touches,number,touches,Valid touches scored,1,0,300,Offense,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+225,27,bouts_won,Bouts Won,number,W,Total bouts won,1,0,50,Record,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+226,27,bouts_lost,Bouts Lost,number,L,Total bouts lost,1,0,50,Record,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+227,27,cards_received,Cards,number,cards,Yellow/red cards received,1,0,10,Discipline,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+228,27,weapon_type,Weapon,text,weapon,Foil/Epee/Sabre specialization,,,,,Equipment,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+229,28,time_60m,60m Time,time,seconds,Time for 60 meter dash,0.01,6.5,12,Sprint,0,Sprinter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+230,28,time_200m,200m Time,time,seconds,Time for 200 meter dash,0.01,20,40,Sprint,1,Sprinter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+231,28,time_400m,400m Time,time,seconds,Time for 400 meter dash,0.01,45,90,Sprint,2,Sprinter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+232,28,time_800m,800m Time,time,mm:ss,Time for 800 meter run,0.01,1:45,3:30,Distance,0,Distance Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+233,28,time_1600m,Mile Time,time,mm:ss,Time for mile run,0.01,3:50,7:00,Distance,1,Distance Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+234,28,time_3000m,3000m Time,time,mm:ss,Time for 3000 meter run,0.01,7:30,14:00,Distance,2,Distance Runner,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+235,28,time_60m_hurdles,60m Hurdles,time,seconds,Time for 60m hurdles,0.01,7.5,15,Hurdles,0,Hurdler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+236,28,high_jump,High Jump,distance,feet-inches,Height cleared in high jump,0.25,3,8,Jumps,0,Jumper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+237,28,pole_vault,Pole Vault,distance,feet-inches,Height cleared in pole vault,0.25,6,20,Jumps,1,Vaulter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+238,28,long_jump,Long Jump,distance,feet-inches,Distance in long jump,0.25,10,30,Jumps,2,Jumper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+239,28,triple_jump,Triple Jump,distance,feet-inches,Distance in triple jump,0.25,20,55,Jumps,3,Jumper,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+240,28,shot_put,Shot Put,distance,feet-inches,Distance thrown in shot put,0.25,20,75,Throws,0,Thrower,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+241,28,weight_throw,Weight Throw,distance,feet,Distance in weight throw,0.5,20,100,Throws,1,Thrower,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+242,29,weight_total,Total Weight,number,lbs,Combined lift total,1,0,2000,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+243,29,bench_press,Bench Press,number,lbs,Maximum bench press,1,0,700,Lifts,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+244,29,squat,Squat,number,lbs,Maximum squat weight,1,0,900,Lifts,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+245,29,deadlift,Deadlift,number,lbs,Maximum deadlift,1,0,1000,Lifts,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+246,29,clean_and_jerk,Clean & Jerk,number,lbs,Maximum clean and jerk,1,0,600,Olympic,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+247,29,snatch,Snatch,number,lbs,Maximum snatch lift,1,0,500,Olympic,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+248,30,racing_wins,Races Won,number,W,Total races won,1,0,50,Racing,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+249,30,time_100m,100m Time,time,seconds,Time for 100m wheelchair race,0.01,12,30,Sprint,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+250,30,time_400m,400m Time,time,seconds,Time for 400m wheelchair race,0.01,40,120,Sprint,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+251,30,shot_put,Shot Put,distance,feet,Distance in seated shot put,0.25,10,50,Throws,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+252,30,discus,Discus,distance,feet,Distance in seated discus,0.5,20,150,Throws,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+253,30,javelin,Javelin,distance,feet,Distance in seated javelin,0.5,20,150,Throws,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+254,31,team_score,Team Score,number,score,Total team points,1,0,1000,Team,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+255,31,bullseyes,Bullseyes,number,X,Bullseye hits,1,0,300,Accuracy,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+256,31,average_score,Average Score,decimal,avg,Average arrow score,0.1,0,10,Accuracy,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+257,31,total_score,Total Score,number,pts,Total points scored,1,0,720,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+258,31,perfect_rounds,Perfect Rounds,number,rounds,Perfect scoring rounds,1,0,50,Achievement,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+259,32,total_weight,Total Weight,number,lbs,Total weight of fish caught,0.1,0,100,Weight,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+260,32,biggest_bass,Biggest Bass,decimal,lbs,Weight of largest bass,0.01,0,20,Weight,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+261,32,fish_caught,Fish Caught,number,fish,Total number of fish,1,0,50,Count,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+262,32,tournaments_fished,Tournaments,number,events,Tournaments participated in,1,0,20,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+263,32,tournament_wins,Tournament Wins,number,wins,Tournaments won,1,0,10,Achievement,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+264,33,race_time,Race Time,time,mm:ss,Time to complete course,0.1,10:00,60:00,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+265,33,races_completed,Races Completed,number,races,Total races finished,1,0,20,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+266,33,team_points,Team Points,number,points,Points earned for team,1,0,100,Team,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+267,33,place_finish,Place Finish,number,place,Finishing position,1,1,200,Performance,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+268,33,races_won,Races Won,number,wins,First place finishes,1,0,10,Achievement,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+269,34,total_points,Total Points,number,pts,Total team points scored,1,0,100,Scoring,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+270,34,routines_performed,Routines,number,routines,Total routines performed,1,0,50,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+271,34,competitions_attended,Competitions,number,comps,Competitions attended,1,0,20,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+272,34,championships_won,Championships,number,champs,Championships won,1,0,10,Achievement,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+273,34,spirit_awards,Spirit Awards,number,awards,Spirit awards received,1,0,10,Awards,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+274,35,runs_scored,Runs,number,runs,Total runs scored,1,0,1000,Batting,0,Batsman,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+275,35,batting_average,Batting Average,decimal,avg,Average runs per dismissal,0.01,0,100,Batting,1,Batsman,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+276,35,wickets,Wickets,number,W,Batsmen dismissed,1,0,200,Bowling,0,Bowler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+277,35,bowling_average,Bowling Average,decimal,avg,Runs conceded per wicket,0.01,0,100,Bowling,1,Bowler,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+278,35,catches,Catches,number,catches,Catches taken,1,0,100,Fielding,0,Fielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+279,35,run_outs,Run Outs,number,RO,Run outs effected,1,0,50,Fielding,1,Fielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+280,36,performance_score,Performance Score,decimal,score,Overall performance rating,0.1,0,100,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+281,36,competitions_attended,Competitions,number,comps,Competitions performed in,1,0,20,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+282,36,routines_performed,Routines,number,routines,Dance routines performed,1,0,50,Performance,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+283,36,championships_won,Championships,number,champs,Championships won,1,0,10,Achievement,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+284,36,awards_received,Awards,number,awards,Individual awards received,1,0,20,Awards,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+285,37,performance_score,Performance Score,decimal,score,Overall drill rating,0.1,0,100,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+286,37,competitions_attended,Competitions,number,comps,Competitions performed in,1,0,20,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+287,37,routines_completed,Routines,number,routines,Drill routines completed,1,0,50,Performance,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+288,37,precision_score,Precision Score,decimal,score,Precision rating,0.1,0,100,Technical,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+289,37,team_awards,Team Awards,number,awards,Team awards earned,1,0,15,Awards,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+290,38,performance_score,Performance Score,decimal,score,Overall poms rating,0.1,0,100,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+291,38,competitions_attended,Competitions,number,comps,Competitions performed in,1,0,20,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+292,38,routines_performed,Routines,number,routines,Pom routines performed,1,0,50,Performance,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+293,38,team_score,Team Score,decimal,score,Team composite score,0.1,0,100,Team,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+294,38,spirit_awards,Spirit Awards,number,awards,Spirit awards received,1,0,10,Awards,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+295,39,prone_score,Prone Score,number,score,Score from prone position,1,0,600,Positions,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+296,39,standing_score,Standing Score,number,score,Score from standing position,1,0,600,Positions,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+297,39,kneeling_score,Kneeling Score,number,score,Score from kneeling position,1,0,600,Positions,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+298,39,total_score,Total Score,number,score,Combined position scores,1,0,1800,Overall,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+299,39,bullseyes,Bullseyes,number,10s,Perfect score shots,1,0,180,Accuracy,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+300,40,tournaments_competed,Tournaments,number,events,Tournaments participated in,1,0,20,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+301,40,rounds_won,Rounds Won,number,W,Debate rounds won,1,0,100,Record,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+302,40,rounds_lost,Rounds Lost,number,L,Debate rounds lost,1,0,100,Record,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+303,40,speaker_points,Speaker Points,decimal,pts,Average speaker points,0.1,0,30,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+304,40,awards_earned,Awards,number,awards,Speaking awards earned,1,0,20,Awards,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+305,41,batting_average,Batting Average,decimal,avg,Hits divided by at-bats,0.001,0,1.000,Batting,0,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+306,41,home_runs,Home Runs,number,HR,Total home runs hit,1,0,50,Batting,1,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+307,41,runs_batted_in,RBIs,number,RBI,Runs batted in,1,0,150,Batting,2,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+308,41,stolen_bases,Stolen Bases,number,SB,Bases stolen,1,0,75,Batting,3,Batter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+309,41,earned_run_average,ERA,decimal,ERA,Earned runs per 7 innings,0.01,0,15,Pitching,0,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+310,41,wins,Wins,number,W,Games won as pitcher,1,0,30,Pitching,1,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+311,41,strikeouts,Strikeouts,number,K,Batters struck out,1,0,300,Pitching,2,Pitcher,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+312,41,fielding_percentage,Fielding %,percentage,%,Successful fielding plays,0.001,0,100,Fielding,0,Fielder,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+313,42,distance_rowed,Distance,number,meters,Total meters rowed,1,0,100000,Performance,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+314,42,time_2k,2K Time,time,mm:ss.s,Time for 2000m row,0.1,5:30,9:00,Performance,1,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+315,42,strokes_per_minute,Stroke Rate,number,spm,Average strokes per minute,1,18,40,Technique,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+316,42,watts,Power Output,number,watts,Average power in watts,1,50,500,Performance,2,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+317,42,split_time,Split Time,time,mm:ss.s,Average 500m split,0.1,1:20,2:30,Performance,3,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+318,43,kills,Kills,number,K,Attack resulting in point,1,0,600,Offense,0,Outside Hitter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+319,43,hitting_percentage,Hitting %,percentage,%,Kill success rate,0.001,-100,100,Offense,1,Middle Blocker,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+320,43,assists,Assists,number,A,Sets resulting in kills,1,0,1200,Offense,2,Setter,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+321,43,aces,Aces,number,SA,Service aces,1,0,120,Serving,0,Server,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+322,43,service_errors,Service Errors,number,SE,Failed serves,1,0,60,Serving,1,Server,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+323,43,digs,Digs,number,D,Defensive saves,1,0,600,Defense,0,Libero,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+324,43,blocks,Blocks,number,B,Successful blocks at net,1,0,250,Defense,1,Middle Blocker,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+325,43,block_assists,Block Assists,number,BA,Assisted blocks,1,0,200,Defense,2,Blocker,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+326,43,points,Points,number,pts,Total points scored,1,0,800,Scoring,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00
+327,43,sets_played,Sets Played,number,sets,Total sets participated in,1,0,150,Participation,0,Team Member,true,2025-06-08 03:00:00+00,2025-06-08 03:00:00+00

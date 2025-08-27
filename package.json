@@ -1,0 +1,51 @@
+{
+  "name": "school-stats-platform",
+  "version": "1.0.0",
+  "description": "NCAA Athletic Program Data Collection and API Service",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "db:migrate": "supabase db push",
+    "db:seed": "supabase db seed",
+    "db:reset": "supabase db reset",
+    "db:gen-types": "supabase gen types typescript --local > lib/supabase/database.types.ts",
+    "scrape:hybrid": "bun lib/scraping/hybrid-scraper-system.ts",
+    "scrape:firecrawl": "bun lib/firecrawl/scrape-athletic-coaches.ts",
+    "scrape:puppeteer": "bun lib/puppeteer/athletic-coach-scraper.ts",
+    "monitor:data-quality": "bun scripts/monitoring/monitor-data-quality.ts",
+    "test": "vitest",
+    "test:e2e": "playwright test",
+    "analyze:blocked-schools": "bun scripts/monitoring/identify-blocked-schools.ts",
+    "migrate:schools": "bun scripts/data-migration/add-major-ncaa-schools.ts",
+    "process:ncaa-data": "bun scripts/data-migration/process-ncaa-data.ts",
+    "validate:datasets": "bun scripts/data-migration/validate-datasets.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "next": "15.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "puppeteer": "^23.3.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "csv-parse": "^5.5.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "15.0.0",
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5",
+    "@playwright/test": "^1.47.0",
+    "supabase": "^1.191.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
