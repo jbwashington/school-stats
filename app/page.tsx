@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function HomePage() {
   return (
-    <div style={{ fontFamily: 'system-ui', maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
+    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
       <header style={{ textAlign: 'center', marginBottom: '40px' }}>
         <h1>🏈 School Stats Platform</h1>
         <p style={{ color: '#666', fontSize: '18px' }}>

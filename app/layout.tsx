@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { GeistMono } from 'geist/font/mono';
 
 export const metadata: Metadata = {
   title: 'School Stats Platform - NCAA Athletic Data API',
@@ -11,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={GeistMono.className}>
       <body>{children}</body>
     </html>
   );
