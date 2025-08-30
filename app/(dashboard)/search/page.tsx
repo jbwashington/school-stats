@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useQueryState } from 'nuqs'
+import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -13,20 +14,21 @@ import {
   Search as SearchIcon,
   ExternalLink,
   MapPin,
-  Phone,
   Mail 
 } from 'lucide-react'
+
+export const dynamic = 'force-dynamic'
 
 interface SearchResult {
   id: string
   type: 'school' | 'staff'
   title: string
   description: string
-  details?: Record<string, any>
+  details?: Record<string, string | number | boolean>
   url: string
 }
 
-export default function SearchPage() {
+function SearchPageContent() {
   const [query] = useQueryState('q', { defaultValue: '' })
   const [results, setResults] = useState<SearchResult[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -40,38 +42,39 @@ export default function SearchPage() {
     await new Promise(resolve => setTimeout(resolve, 300))
     
     // Mock data - replace with actual search API
-    const mockResults: SearchResult[] = [
-      {
-        id: '1',
-        type: 'school',
-        title: 'University of Alabama',
-        description: 'NCAA DI • SEC Conference • Tuscaloosa, AL',
-        details: {
-          conference: 'SEC',
-          division: 'NCAA DI',
-          location: 'Tuscaloosa, AL',
-          enrollment: 38563
-        },
-        url: '/schools/1'
+    const schoolResult: SearchResult = {
+      id: '1',
+      type: 'school',
+      title: 'University of Alabama',
+      description: 'NCAA DI • SEC Conference • Tuscaloosa, AL',
+      details: {
+        conference: 'SEC',
+        division: 'NCAA DI',
+        location: 'Tuscaloosa, AL',
+        enrollment: 38563
       },
-      {
-        id: '2',
-        type: 'staff',
-        title: 'Nick Saban',
-        description: 'Head Coach • Football • University of Alabama',
-        details: {
-          title: 'Head Coach',
-          sport: 'Football',
-          school: 'University of Alabama',
-          email: 'nsaban@athletics.ua.edu'
-        },
-        url: '/staff/2'
+      url: '/schools/1'
+    }
+
+    const staffResult: SearchResult = {
+      id: '2',
+      type: 'staff',
+      title: 'Nick Saban',
+      description: 'Head Coach • Football • University of Alabama',
+      details: {
+        title: 'Head Coach',
+        sport: 'Football',
+        school: 'University of Alabama',
+        email: 'nsaban@athletics.ua.edu'
       },
-      // Add more mock results as needed
-    ].filter(result => 
-      result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      result.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+      url: '/staff/2'
+    }
+
+    const mockResults: SearchResult[] = [schoolResult, staffResult]
+      .filter(result => 
+        result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        result.description.toLowerCase().includes(searchQuery.toLowerCase())
+      )
 
     return mockResults
   }
@@ -122,7 +125,7 @@ export default function SearchPage() {
             <h1 className="text-2xl font-bold">Search Results</h1>
             {query && (
               <p className="text-muted-foreground">
-                {isLoading ? 'Searching...' : `${formatNumber(totalResults)} results for "${query}"`}
+                {isLoading ? 'Searching...' : `${formatNumber(totalResults)} results for &quot;${query}&quot;`}
               </p>
             )}
           </div>
@@ -158,14 +161,14 @@ export default function SearchPage() {
             <SearchIcon className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
             <CardTitle>No Results Found</CardTitle>
             <CardDescription>
-              No results found for "{query}". Try adjusting your search terms or browse our directory.
+              No results found for &quot;{query}&quot;. Try adjusting your search terms or browse our directory.
             </CardDescription>
             <div className="flex justify-center space-x-2 mt-4">
               <Button variant="outline" asChild>
-                <a href="/schools">Browse Schools</a>
+                <Link href="/schools">Browse Schools</Link>
               </Button>
               <Button variant="outline" asChild>
-                <a href="/staff">Browse Staff</a>
+                <Link href="/staff">Browse Staff</Link>
               </Button>
             </div>
           </CardHeader>
@@ -191,10 +194,10 @@ export default function SearchPage() {
                     </div>
                   </div>
                   <Button variant="ghost" size="sm" asChild>
-                    <a href={result.url} className="flex items-center space-x-1">
+                    <Link href={result.url} className="flex items-center space-x-1">
                       <span>View</span>
                       <ExternalLink className="h-3 w-3" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </CardHeader>
@@ -225,7 +228,7 @@ export default function SearchPage() {
                             </div>
                           </div>
                         )}
-                        {result.details.enrollment && (
+                        {result.details.enrollment && typeof result.details.enrollment === 'number' && (
                           <div>
                             <span className="text-muted-foreground">Enrollment:</span>
                             <div className="font-medium">{formatNumber(result.details.enrollment)}</div>
@@ -273,5 +276,13 @@ export default function SearchPage() {
         </div>
       )}
     </div>
+  )
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div className="p-8">Loading...</div>}>
+      <SearchPageContent />
+    </Suspense>
   )
 }

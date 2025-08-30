@@ -13,7 +13,15 @@ interface HybridScrapingResult {
   school_name: string;
   method: 'firecrawl' | 'puppeteer';
   success: boolean;
-  coaches: any[];
+  coaches: Array<{
+    name: string;
+    title?: string;
+    sport?: string;
+    email?: string;
+    phone?: string;
+    bio?: string;
+    confidence_score?: number;
+  }>;
   source_url: string;
   scraping_time: number;
   error?: string;
@@ -113,7 +121,15 @@ export class HybridScraperSystem {
         school_name: schoolName,
         method: 'firecrawl',
         success: (coaches?.length || 0) > 0,
-        coaches: coaches || [],
+        coaches: coaches?.map(coach => ({
+          name: coach.name,
+          title: coach.title || undefined,
+          sport: coach.sport || undefined,
+          email: coach.email || undefined,
+          phone: coach.phone || undefined,
+          bio: coach.bio || undefined,
+          confidence_score: coach.confidence_score || undefined
+        })) || [],
         source_url: athleticWebsite,
         scraping_time: scrapingTime,
         error: (coaches?.length || 0) === 0 ? 'No coaches extracted' : undefined

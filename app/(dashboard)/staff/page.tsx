@@ -1,23 +1,21 @@
 import { createServiceRoleClient } from '@/lib/supabase/service-role'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { formatNumber, getConferenceColor, getDivisionColor } from '@/lib/utils'
-import { Mail, Phone, ExternalLink, User, Trophy, MapPin } from 'lucide-react'
+import { getConferenceColor, getDivisionColor } from '@/lib/utils'
+import { Mail, Phone, User, Trophy, MapPin } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 interface StaffMember {
   id: number
   name: string
-  title?: string
-  sport?: string
-  email?: string
-  phone?: string
-  bio?: string
-  photo_url?: string
-  scraping_method?: string
-  confidence_score?: number
-  ncaa_school_id?: number
+  title: string | null
+  sport: string | null
+  email: string | null
+  phone: string | null
+  bio: string | null
+  scraping_method: string | null
+  confidence_score: number | null
+  ncaa_school_id: number | null
   school_name?: string
   school_conference?: string
   school_division?: string
@@ -39,7 +37,6 @@ async function getAthleticStaff(): Promise<StaffMember[]> {
         email,
         phone,
         bio,
-        photo_url,
         scraping_method,
         confidence_score,
         ncaa_school_id,
@@ -210,19 +207,9 @@ function StaffCard({ member }: { member: StaffMember }) {
     <Card className="hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start space-x-3">
-          {member.photo_url ? (
-            <Image
-              src={member.photo_url}
-              alt={member.name}
-              width={48}
-              height={48}
-              className="rounded-full object-cover"
-            />
-          ) : (
-            <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center">
-              <User className="h-6 w-6 text-muted-foreground" />
-            </div>
-          )}
+          <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center">
+            <User className="h-6 w-6 text-muted-foreground" />
+          </div>
           <div className="flex-1 min-w-0">
             <CardTitle className="text-base line-clamp-1">{member.name}</CardTitle>
             <CardDescription className="text-sm">

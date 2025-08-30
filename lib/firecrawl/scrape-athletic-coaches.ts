@@ -8,6 +8,12 @@
 
 import { firecrawlApp } from '@/lib/vendors/firecrawl';
 import { createServiceRoleClient } from '@/lib/supabase/service-role';
+
+interface FirecrawlResult {
+  success: boolean
+  markdown?: string
+  error?: string
+}
 import fs from 'fs/promises';
 
 interface AthleticCoach {
@@ -47,41 +53,6 @@ interface SchoolCoachingData {
   };
 }
 
-/**
- * AI prompt for extracting COACHES ONLY (no faculty/academic staff)
- */
-const COACH_EXTRACTION_PROMPT = `
-Extract COACHING STAFF ONLY from this athletic website. 
-
-INCLUDE ONLY:
-- Head Coaches
-- Assistant Coaches  
-- Associate Head Coaches
-- Recruiting Coordinators
-- Volunteer Coaches
-- Graduate Assistant Coaches
-
-EXCLUDE ALL:
-- Faculty members
-- Academic advisors
-- Professors
-- Administrators (unless they're also coaches)
-- Support staff (trainers, managers, etc.)
-- Academic coordinators
-
-For each COACH, extract:
-- Full name
-- Exact title (Head Coach, Assistant Coach, etc.)
-- Sport/team they coach
-- Email address
-- Phone number
-- Brief bio/background
-- Photo URL if available
-- Whether they handle recruiting
-
-Focus on people who can directly impact athletic scholarships and recruitment decisions.
-Return as structured JSON with high confidence scores for coaching staff only.
-`;
 
 /**
  * Scrape coaches from a school's athletic website
@@ -117,9 +88,9 @@ async function scrapeSchoolCoaches(
       }
     );
 
-    if (staffResult.success && (staffResult as any).markdown) {
+    if (staffResult.success && (staffResult as FirecrawlResult).markdown) {
       const staffData = await extractCoachesFromContent(
-        (staffResult as any).markdown,
+        (staffResult as FirecrawlResult).markdown!,
         'athletic_website'
       );
       result.coaches.push(...staffData);
@@ -143,9 +114,9 @@ async function scrapeSchoolCoaches(
           }
         );
 
-        if (pageResult.success && (pageResult as any).markdown) {
+        if (pageResult.success && (pageResult as FirecrawlResult).markdown) {
           const pageCoaches = await extractCoachesFromContent(
-            (pageResult as any).markdown,
+            (pageResult as FirecrawlResult).markdown!,
             'athletic_website'
           );
           
@@ -261,8 +232,6 @@ function isNameInCoachingContext(name: string, content: string): boolean {
 function extractContactInfo(name: string, content: string): { email?: string; phone?: string } {
   const result: { email?: string; phone?: string } = {};
   
-  // Escape name for regex
-  const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   
   // Look for email addresses near the coach's name (within 500 characters)
   const nameIndex = content.toLowerCase().indexOf(name.toLowerCase());
@@ -304,8 +273,6 @@ function extractContactInfo(name: string, content: string): { email?: string; ph
 function extractSportAndTitle(name: string, content: string): { sport: string; title: string } {
   const result = { sport: 'General Athletics', title: 'Assistant Coach' }; // Defaults
   
-  // Escape name for regex
-  const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   
   // Look for sport and title context around the coach's name (within 300 characters)
   const nameIndex = content.toLowerCase().indexOf(name.toLowerCase());

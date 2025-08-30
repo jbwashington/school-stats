@@ -9,7 +9,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { GraduationCap, Users, Filter, Search } from 'lucide-react'
+import { Users, Filter, Search } from 'lucide-react'
+
+export const dynamic = 'force-dynamic'
 
 export default function SchoolsPage() {
   return (

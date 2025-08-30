@@ -45,7 +45,7 @@ export async function GET(request: NextRequest) {
       .order('name')
       .range(offset, offset + limit - 1);
     
-    const { data: schools, error, count } = await query;
+    const { data: schools, error } = await query;
     
     if (error) {
       return createErrorResponse(`Database error: ${error.message}`, 500);
@@ -58,18 +58,14 @@ export async function GET(request: NextRequest) {
     
     return createApiResponse(schools, {
       metadata: {
-        pagination: {
-          limit,
-          offset,
-          total: totalCount || 0,
-          returned: schools?.length || 0
-        },
-        filters: {
-          conference,
-          state, 
-          division,
-          search
-        }
+        limit: limit,
+        offset: offset,
+        total: totalCount || 0,
+        returned: schools?.length || 0,
+        conference: conference || 'none',
+        state: state || 'none',
+        division: division || 'none',
+        search: search || 'none'
       }
     });
     

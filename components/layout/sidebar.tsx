@@ -11,10 +11,6 @@ import {
   Globe,
   Database,
   Trophy,
-  Palette,
-  MapPin,
-  DollarSign,
-  Settings,
   Activity,
 } from 'lucide-react'
 

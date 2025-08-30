@@ -107,7 +107,8 @@ export async function GET(request: NextRequest) {
       query = query.range(offset, offset + limit - 1);
     }
     
-    let { data: results, error } = await query;
+    const { data, error } = await query;
+    let results = data;
     
     if (error) {
       return createErrorResponse(`Database error: ${error.message}`, 500);
@@ -142,10 +143,14 @@ export async function GET(request: NextRequest) {
     if (results && results.length > 0) {
       results.forEach(staff => {
         // Sport breakdown
-        stats.by_sport[staff.sport] = (stats.by_sport[staff.sport] || 0) + 1;
+        if (staff.sport) {
+          stats.by_sport[staff.sport] = (stats.by_sport[staff.sport] || 0) + 1;
+        }
         
         // Method breakdown
-        stats.by_method[staff.scraping_method] = (stats.by_method[staff.scraping_method] || 0) + 1;
+        if (staff.scraping_method) {
+          stats.by_method[staff.scraping_method] = (stats.by_method[staff.scraping_method] || 0) + 1;
+        }
         
         // Conference breakdown
         if (staff.schools_ncaa_verified?.conference) {
@@ -172,24 +177,21 @@ export async function GET(request: NextRequest) {
     
     return createApiResponse(results, {
       metadata: {
-        search_params: {
-          name,
-          sport,
-          title,
-          conference,
-          state,
-          has_email: hasEmail,
-          has_phone: hasPhone,
-          min_confidence: minConfidence,
-          search,
-          method
-        },
-        statistics: stats,
-        pagination: {
-          limit,
-          offset,
-          returned: results?.length || 0
-        }
+        name: name || 'none',
+        sport: sport || 'none',
+        title: title || 'none',
+        conference: conference || 'none',
+        state: state || 'none',
+        has_email: hasEmail || 'none',
+        has_phone: hasPhone || 'none',
+        min_confidence: minConfidence || 'none',
+        search: search || 'none',
+        method: method || 'none',
+        total_results: stats.total_results,
+        avg_confidence: stats.avg_confidence,
+        limit: limit,
+        offset: offset,
+        returned: results?.length || 0
       }
     });
     

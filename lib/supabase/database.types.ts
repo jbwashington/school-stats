@@ -19,7 +19,7 @@ export type Database = {
           longitude: number | null
           academic_website: string | null
           athletic_website: string | null
-          colors: any | null
+          colors: Record<string, string> | null
           logo_url: string | null
           mascot: string | null
           data_sources: string[] | null
@@ -45,7 +45,7 @@ export type Database = {
           longitude?: number | null
           academic_website?: string | null
           athletic_website?: string | null
-          colors?: any | null
+          colors?: Record<string, string> | null
           logo_url?: string | null
           mascot?: string | null
           data_sources?: string[] | null
@@ -71,7 +71,7 @@ export type Database = {
           longitude?: number | null
           academic_website?: string | null
           athletic_website?: string | null
-          colors?: any | null
+          colors?: Record<string, string> | null
           logo_url?: string | null
           mascot?: string | null
           data_sources?: string[] | null
@@ -163,7 +163,7 @@ export type Database = {
           secondary_color: string | null
           primary_hex: string | null
           secondary_hex: string | null
-          additional_colors: any | null
+          additional_colors: unknown | null
           logo_url: string | null
           logo_svg: string | null
           mascot_name: string | null
@@ -178,7 +178,7 @@ export type Database = {
           secondary_color?: string | null
           primary_hex?: string | null
           secondary_hex?: string | null
-          additional_colors?: any | null
+          additional_colors?: unknown | null
           logo_url?: string | null
           logo_svg?: string | null
           mascot_name?: string | null
@@ -193,7 +193,7 @@ export type Database = {
           secondary_color?: string | null
           primary_hex?: string | null
           secondary_hex?: string | null
-          additional_colors?: any | null
+          additional_colors?: unknown | null
           logo_url?: string | null
           logo_svg?: string | null
           mascot_name?: string | null
@@ -274,7 +274,7 @@ export type Database = {
           coaches_extracted: number | null
           success_rate: number | null
           average_scraping_time: number | null
-          errors: any | null
+          errors: unknown | null
           started_at: string
           completed_at: string | null
         }
@@ -284,7 +284,7 @@ export type Database = {
           coaches_extracted?: number | null
           success_rate?: number | null
           average_scraping_time?: number | null
-          errors?: any | null
+          errors?: unknown | null
           started_at?: string
           completed_at?: string | null
         }
@@ -294,7 +294,7 @@ export type Database = {
           coaches_extracted?: number | null
           success_rate?: number | null
           average_scraping_time?: number | null
-          errors?: any | null
+          errors?: unknown | null
           started_at?: string
           completed_at?: string | null
         }
@@ -305,7 +305,7 @@ export type Database = {
           id: number
           key_name: string
           key_hash: string
-          permissions: any | null
+          permissions: unknown | null
           rate_limit_per_hour: number | null
           created_at: string
           last_used_at: string | null
@@ -314,7 +314,7 @@ export type Database = {
         Insert: {
           key_name: string
           key_hash: string
-          permissions?: any | null
+          permissions?: unknown | null
           rate_limit_per_hour?: number | null
           created_at?: string
           last_used_at?: string | null
@@ -323,7 +323,7 @@ export type Database = {
         Update: {
           key_name?: string
           key_hash?: string
-          permissions?: any | null
+          permissions?: unknown | null
           rate_limit_per_hour?: number | null
           created_at?: string
           last_used_at?: string | null

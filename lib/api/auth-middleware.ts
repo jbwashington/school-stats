@@ -64,7 +64,9 @@ async function validateApiKey(apiKey: string): Promise<ApiKeyData> {
   
   return {
     ...keyData,
-    permissions: keyData.permissions as ApiKeyData['permissions']
+    permissions: keyData.permissions as ApiKeyData['permissions'],
+    rate_limit_per_hour: keyData.rate_limit_per_hour ?? 1000,
+    is_active: keyData.is_active ?? true
   };
 }
 
@@ -114,10 +116,10 @@ export function requirePermission(keyData: ApiKeyData, permission: 'read' | 'wri
   }
 }
 
-export function createApiResponse(data: any, options: { 
+export function createApiResponse(data: unknown, options: { 
   status?: number;
   message?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, string | number | boolean>;
 } = {}) {
   const { status = 200, message, metadata = {} } = options;
   

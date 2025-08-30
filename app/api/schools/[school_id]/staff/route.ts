@@ -108,8 +108,12 @@ export async function GET(
     if (statsData) {
       // Calculate sport breakdown
       statsData.forEach(s => {
-        stats.by_sport[s.sport] = (stats.by_sport[s.sport] || 0) + 1;
-        stats.by_method[s.scraping_method] = (stats.by_method[s.scraping_method] || 0) + 1;
+        if (s.sport) {
+          stats.by_sport[s.sport] = (stats.by_sport[s.sport] || 0) + 1;
+        }
+        if (s.scraping_method) {
+          stats.by_method[s.scraping_method] = (stats.by_method[s.scraping_method] || 0) + 1;
+        }
       });
       
       // Calculate average confidence
@@ -124,23 +128,14 @@ export async function GET(
     
     return createApiResponse(staff, {
       metadata: {
-        school: {
-          id: school.id,
-          name: school.name
-        },
-        statistics: stats,
-        filters: {
-          sport,
-          title,
-          search,
-          has_email: hasEmail,
-          has_phone: hasPhone
-        },
-        pagination: {
-          limit,
-          offset,
-          returned: staff?.length || 0
-        }
+        school_id: school.id,
+        school_name: school.name,
+        total_staff: stats.total_staff,
+        staff_with_email: stats.with_email,
+        staff_with_phone: stats.with_phone,
+        limit: limit,
+        offset: offset,
+        returned: staff?.length || 0
       }
     });
     

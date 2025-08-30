@@ -1,12 +1,11 @@
 import { createServiceRoleClient } from '@/lib/supabase/service-role'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { formatNumber, formatCurrency } from '@/lib/utils'
+import { formatNumber } from '@/lib/utils'
 import { 
   GraduationCap, 
   Users, 
   Trophy, 
-  DollarSign, 
   BarChart3, 
   Globe,
   Activity,

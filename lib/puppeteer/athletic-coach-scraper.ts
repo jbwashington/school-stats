@@ -6,7 +6,6 @@
  */
 
 import { StealthScraper } from './stealth-scraper';
-import { createServiceRoleClient } from '@/lib/supabase/service-role';
 
 interface CoachData {
   name: string;
@@ -119,11 +118,11 @@ class AthleticCoachScraper {
         const title = this.cleanTitle(match[2]);
         
         if (name && title && this.isValidCoach(name, title)) {
-          const sport = this.extractSport(match[0], content);
+          const sport = this.extractSport(match[0]);
           const email = this.extractEmail(name, content);
           
           // Extract phone number if present
-          const phone = this.extractPhone(match[0], content);
+          const phone = this.extractPhone(match[0]);
           
           console.log(`   🎯 Found match: "${name}" - "${title}" (${sport})`);
           if (email) console.log(`     📧 Email: ${email}`);
@@ -216,7 +215,7 @@ class AthleticCoachScraper {
   /**
    * Extract sport from context
    */
-  private extractSport(context: string, fullContent: string): string {
+  private extractSport(context: string): string {
     const sportPatterns = {
       'Football': /football/i,
       'Basketball': /basketball/i, 
@@ -256,7 +255,7 @@ class AthleticCoachScraper {
   /**
    * Extract phone number from context
    */
-  private extractPhone(context: string, fullContent?: string): string | undefined {
+  private extractPhone(context: string): string | undefined {
     // Look for phone numbers in the immediate context first
     const phonePatterns = [
       /(\d{3}-\d{3}-\d{4})/,           // 123-456-7890

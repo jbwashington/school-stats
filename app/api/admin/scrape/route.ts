@@ -12,9 +12,9 @@ export async function POST(request: NextRequest) {
     const requestBody = await request.json().catch(() => ({}));
     
     const {
-      method = 'hybrid',
-      school_ids,
-      force_refresh = false
+      method = 'hybrid' as string,
+      school_ids = undefined as number[] | undefined,
+      force_refresh = false as boolean
     } = requestBody;
     
     // Validate method
@@ -89,12 +89,10 @@ export async function POST(request: NextRequest) {
       status: 202,
       message: 'Scraping job started successfully',
       metadata: {
-        job_details: {
-          method,
-          schools_to_process: schools.length,
-          force_refresh,
-          estimated_duration: `${Math.ceil(schools.length * 30 / 60)} minutes`
-        }
+        method: method,
+        schools_to_process: schools.length,
+        force_refresh: force_refresh,
+        estimated_duration: `${Math.ceil(schools.length * 30 / 60)} minutes`
       }
     });
     
@@ -180,12 +178,12 @@ async function performScraping(params: {
   runId: number;
   force_refresh: boolean;
 }) {
-  const { method, schools, runId, force_refresh } = params;
+  const { method, schools, runId } = params;
   const supabase = createServiceRoleClient();
   
   let totalCoaches = 0;
   let successfulSchools = 0;
-  const errors: any[] = [];
+  const errors: { school_id: number; error: string; timestamp: string }[] = [];
   const startTime = Date.now();
   
   try {
@@ -208,8 +206,7 @@ async function performScraping(params: {
           } else {
             errors.push({
               school_id: school.id,
-              school_name: school.name,
-              error: result.error,
+              error: result.error || 'Unknown scraping error',
               timestamp: new Date().toISOString()
             });
           }
@@ -226,7 +223,6 @@ async function performScraping(params: {
         } catch (error) {
           errors.push({
             school_id: school.id,
-            school_name: school.name,
             error: error instanceof Error ? error.message : String(error),
             timestamp: new Date().toISOString()
           });
@@ -269,8 +265,7 @@ async function performScraping(params: {
           } else {
             errors.push({
               school_id: school.id,
-              school_name: school.name,
-              error: result.error,
+              error: result.error || 'Unknown scraping error',
               timestamp: new Date().toISOString()
             });
           }
@@ -278,7 +273,6 @@ async function performScraping(params: {
         } catch (error) {
           errors.push({
             school_id: school.id,
-            school_name: school.name,
             error: error instanceof Error ? error.message : String(error),
             timestamp: new Date().toISOString()
           });
@@ -307,7 +301,6 @@ async function performScraping(params: {
         } else {
           errors.push({
             school_id: school.id,
-            school_name: school.name,
             error: 'No coaches extracted',
             timestamp: new Date().toISOString()
           });

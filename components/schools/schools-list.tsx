@@ -11,8 +11,6 @@ import {
   ExternalLink, 
   MapPin, 
   Users, 
-  DollarSign, 
-  Phone, 
   Globe,
   ChevronLeft,
   ChevronRight
@@ -30,19 +28,8 @@ interface School {
   created_at: string
 }
 
-interface SchoolsListProps {
-  className?: string
-}
-
-export function SchoolsList({ className }: SchoolsListProps) {
-  const [filters] = useQueryStates(filterParams)
-  const [schools, setSchools] = useState<School[]>([])
-  const [isLoading, setIsLoading] = useState(false)
-  const [totalPages, setTotalPages] = useState(1)
-  const [totalResults, setTotalResults] = useState(0)
-
-  // Mock schools data - replace with actual API call
-  const mockSchools: School[] = [
+// Mock schools data - replace with actual API call
+const mockSchools: School[] = [
     {
       id: 1,
       name: "University of Alabama",
@@ -79,6 +66,13 @@ export function SchoolsList({ className }: SchoolsListProps) {
     // Add more mock schools as needed
   ]
 
+export function SchoolsList() {
+  const [filters] = useQueryStates(filterParams)
+  const [schools, setSchools] = useState<School[]>([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [totalPages, setTotalPages] = useState(1)
+  const [totalResults, setTotalResults] = useState(0)
+
   const filterSchools = (schools: School[], filters: SchoolsFilterState): School[] => {
     return schools.filter(school => {
       if (filters.search && !school.name.toLowerCase().includes(filters.search.toLowerCase())) {
@@ -108,8 +102,17 @@ export function SchoolsList({ className }: SchoolsListProps) {
 
     // Simulate API call
     setTimeout(() => {
-      const filteredSchools = filterSchools(mockSchools, filters)
-      const paginatedSchools = paginate(filteredSchools, filters.page)
+      // Convert nullable filter values to non-nullable for type safety
+      const safeFilters: SchoolsFilterState = {
+        search: filters.search || '',
+        division: filters.division || 'all',
+        conference: filters.conference || 'all', 
+        state: filters.state || 'all',
+        page: filters.page || 1
+      }
+      
+      const filteredSchools = filterSchools(mockSchools, safeFilters)
+      const paginatedSchools = paginate(filteredSchools, safeFilters.page)
       
       setSchools(paginatedSchools)
       setTotalResults(filteredSchools.length)
@@ -118,10 +121,6 @@ export function SchoolsList({ className }: SchoolsListProps) {
     }, 300)
   }, [filters])
 
-  const handlePageChange = (newPage: number) => {
-    // This will be handled by the URL state
-    // The parent component should use setFilters to update the page
-  }
 
   if (isLoading) {
     return (
@@ -163,7 +162,7 @@ export function SchoolsList({ className }: SchoolsListProps) {
       <div className="flex items-center justify-between">
         <p className="text-sm text-muted-foreground">
           Showing {formatNumber(schools.length)} of {formatNumber(totalResults)} schools
-          {filters.page > 1 && ` (Page ${filters.page} of ${totalPages})`}
+          {(filters.page || 1) > 1 && ` (Page ${filters.page || 1} of ${totalPages})`}
         </p>
       </div>
 
@@ -241,7 +240,7 @@ export function SchoolsList({ className }: SchoolsListProps) {
           <Button 
             variant="outline" 
             size="sm"
-            disabled={filters.page <= 1}
+            disabled={(filters.page || 1) <= 1}
             // onClick={() => handlePageChange(filters.page - 1)}
           >
             <ChevronLeft className="h-4 w-4 mr-1" />
@@ -250,11 +249,11 @@ export function SchoolsList({ className }: SchoolsListProps) {
           
           <div className="flex items-center space-x-1">
             {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
-              const pageNum = i + Math.max(1, filters.page - 2)
+              const pageNum = i + Math.max(1, (filters.page || 1) - 2)
               return (
                 <Button
                   key={pageNum}
-                  variant={pageNum === filters.page ? "default" : "outline"}
+                  variant={pageNum === (filters.page || 1) ? "default" : "outline"}
                   size="sm"
                   // onClick={() => handlePageChange(pageNum)}
                 >
@@ -267,7 +266,7 @@ export function SchoolsList({ className }: SchoolsListProps) {
           <Button 
             variant="outline" 
             size="sm"
-            disabled={filters.page >= totalPages}
+            disabled={(filters.page || 1) >= totalPages}
             // onClick={() => handlePageChange(filters.page + 1)}
           >
             Next

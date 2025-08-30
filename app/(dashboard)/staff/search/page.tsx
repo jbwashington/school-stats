@@ -4,9 +4,11 @@ import { useState, useEffect } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { formatNumber, getConferenceColor, getDivisionColor } from '@/lib/utils'
-import { Search, Filter, Mail, Phone, User, Trophy, MapPin, ExternalLink } from 'lucide-react'
+import { Search, Filter, Mail, Phone, User, Trophy, MapPin } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+
+export const dynamic = 'force-dynamic'
 
 interface SearchFilters {
   query: string
