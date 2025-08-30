@@ -1,56 +1,85 @@
-export type Json =
-  | string
-  | number
-  | boolean
-  | null
-  | { [key: string]: Json | undefined }
-  | Json[]
-
-export interface Database {
+export type Database = {
   public: {
     Tables: {
       schools_ncaa_verified: {
         Row: {
           id: number
           name: string
-          athletic_website: string | null
-          conference: string | null
-          athletic_division: string | null
-          state: string | null
+          normalized_name: string
+          ncaa_id: string
+          athletic_division: string
+          conference: string
+          subdivision_level: string | null
+          school_type: string
+          school_level: string
           city: string | null
+          state: string
+          full_location: string | null
+          latitude: number | null
+          longitude: number | null
+          academic_website: string | null
+          athletic_website: string | null
+          colors: any | null
+          logo_url: string | null
           mascot: string | null
-          primary_color: string | null
-          secondary_color: string | null
+          data_sources: string[] | null
+          verification_status: string
+          data_quality_score: number | null
           created_at: string
           updated_at: string
+          last_scraped_at: string | null
         }
         Insert: {
-          id?: number
           name: string
-          athletic_website?: string | null
-          conference?: string | null
-          athletic_division?: string | null
-          state?: string | null
+          normalized_name: string
+          ncaa_id: string
+          athletic_division: string
+          conference: string
+          subdivision_level?: string | null
+          school_type?: string
+          school_level?: string
           city?: string | null
+          state: string
+          full_location?: string | null
+          latitude?: number | null
+          longitude?: number | null
+          academic_website?: string | null
+          athletic_website?: string | null
+          colors?: any | null
+          logo_url?: string | null
           mascot?: string | null
-          primary_color?: string | null
-          secondary_color?: string | null
+          data_sources?: string[] | null
+          verification_status?: string
+          data_quality_score?: number | null
           created_at?: string
           updated_at?: string
+          last_scraped_at?: string | null
         }
         Update: {
-          id?: number
           name?: string
-          athletic_website?: string | null
-          conference?: string | null
-          athletic_division?: string | null
-          state?: string | null
+          normalized_name?: string
+          ncaa_id?: string
+          athletic_division?: string
+          conference?: string
+          subdivision_level?: string | null
+          school_type?: string
+          school_level?: string
           city?: string | null
+          state?: string
+          full_location?: string | null
+          latitude?: number | null
+          longitude?: number | null
+          academic_website?: string | null
+          athletic_website?: string | null
+          colors?: any | null
+          logo_url?: string | null
           mascot?: string | null
-          primary_color?: string | null
-          secondary_color?: string | null
+          data_sources?: string[] | null
+          verification_status?: string
+          data_quality_score?: number | null
           created_at?: string
           updated_at?: string
+          last_scraped_at?: string | null
         }
         Relationships: []
       }
@@ -61,42 +90,58 @@ export interface Database {
           school_id: number | null
           name: string
           title: string | null
-          sport: string
+          sport: string | null
+          sport_category: string | null
           email: string | null
           phone: string | null
           bio: string | null
-          scraping_method: string
-          confidence_score: number
+          scraping_method: string | null
+          confidence_score: number | null
+          contact_priority: number | null
+          recruiting_coordinator: boolean | null
+          firecrawl_confidence: number | null
+          scraping_source: string | null
+          last_verified_at: string | null
           created_at: string
           updated_at: string
         }
         Insert: {
-          id?: number
           ncaa_school_id?: number | null
           school_id?: number | null
           name: string
           title?: string | null
-          sport?: string
+          sport?: string | null
+          sport_category?: string | null
           email?: string | null
           phone?: string | null
           bio?: string | null
-          scraping_method?: string
-          confidence_score?: number
+          scraping_method?: string | null
+          confidence_score?: number | null
+          contact_priority?: number | null
+          recruiting_coordinator?: boolean | null
+          firecrawl_confidence?: number | null
+          scraping_source?: string | null
+          last_verified_at?: string | null
           created_at?: string
           updated_at?: string
         }
         Update: {
-          id?: number
           ncaa_school_id?: number | null
           school_id?: number | null
           name?: string
           title?: string | null
-          sport?: string
+          sport?: string | null
+          sport_category?: string | null
           email?: string | null
           phone?: string | null
           bio?: string | null
-          scraping_method?: string
-          confidence_score?: number
+          scraping_method?: string | null
+          confidence_score?: number | null
+          contact_priority?: number | null
+          recruiting_coordinator?: boolean | null
+          firecrawl_confidence?: number | null
+          scraping_source?: string | null
+          last_verified_at?: string | null
           created_at?: string
           updated_at?: string
         }
@@ -110,37 +155,146 @@ export interface Database {
           }
         ]
       }
+      school_visual_identity: {
+        Row: {
+          id: number
+          school_id: number
+          primary_color: string | null
+          secondary_color: string | null
+          primary_hex: string | null
+          secondary_hex: string | null
+          additional_colors: any | null
+          logo_url: string | null
+          logo_svg: string | null
+          mascot_name: string | null
+          mascot_image_url: string | null
+          color_source: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          school_id: number
+          primary_color?: string | null
+          secondary_color?: string | null
+          primary_hex?: string | null
+          secondary_hex?: string | null
+          additional_colors?: any | null
+          logo_url?: string | null
+          logo_svg?: string | null
+          mascot_name?: string | null
+          mascot_image_url?: string | null
+          color_source?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          school_id?: number
+          primary_color?: string | null
+          secondary_color?: string | null
+          primary_hex?: string | null
+          secondary_hex?: string | null
+          additional_colors?: any | null
+          logo_url?: string | null
+          logo_svg?: string | null
+          mascot_name?: string | null
+          mascot_image_url?: string | null
+          color_source?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "school_visual_identity_school_id_fkey"
+            columns: ["school_id"]
+            isOneToOne: true
+            referencedRelation: "schools_ncaa_verified"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      firecrawl_scraping_log: {
+        Row: {
+          id: number
+          school_id: number
+          target_url: string
+          scraping_method: string
+          success: boolean
+          staff_found_count: number | null
+          coaches_identified_count: number | null
+          error_message: string | null
+          retry_count: number | null
+          processing_time_ms: number | null
+          firecrawl_confidence: number | null
+          attempted_at: string
+          completed_at: string | null
+        }
+        Insert: {
+          school_id: number
+          target_url: string
+          scraping_method: string
+          success: boolean
+          staff_found_count?: number | null
+          coaches_identified_count?: number | null
+          error_message?: string | null
+          retry_count?: number | null
+          processing_time_ms?: number | null
+          firecrawl_confidence?: number | null
+          attempted_at?: string
+          completed_at?: string | null
+        }
+        Update: {
+          school_id?: number
+          target_url?: string
+          scraping_method?: string
+          success?: boolean
+          staff_found_count?: number | null
+          coaches_identified_count?: number | null
+          error_message?: string | null
+          retry_count?: number | null
+          processing_time_ms?: number | null
+          firecrawl_confidence?: number | null
+          attempted_at?: string
+          completed_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "firecrawl_scraping_log_school_id_fkey"
+            columns: ["school_id"]
+            isOneToOne: false
+            referencedRelation: "schools_ncaa_verified"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
       scraping_runs: {
         Row: {
           id: number
           method: string
-          schools_processed: number
-          coaches_extracted: number
+          schools_processed: number | null
+          coaches_extracted: number | null
           success_rate: number | null
           average_scraping_time: number | null
-          errors: Json | null
+          errors: any | null
           started_at: string
           completed_at: string | null
         }
         Insert: {
-          id?: number
           method: string
-          schools_processed?: number
-          coaches_extracted?: number
+          schools_processed?: number | null
+          coaches_extracted?: number | null
           success_rate?: number | null
           average_scraping_time?: number | null
-          errors?: Json | null
+          errors?: any | null
           started_at?: string
           completed_at?: string | null
         }
         Update: {
-          id?: number
           method?: string
-          schools_processed?: number
-          coaches_extracted?: number
+          schools_processed?: number | null
+          coaches_extracted?: number | null
           success_rate?: number | null
           average_scraping_time?: number | null
-          errors?: Json | null
+          errors?: any | null
           started_at?: string
           completed_at?: string | null
         }
@@ -151,38 +305,44 @@ export interface Database {
           id: number
           key_name: string
           key_hash: string
-          permissions: Json
-          rate_limit_per_hour: number
+          permissions: any | null
+          rate_limit_per_hour: number | null
           created_at: string
           last_used_at: string | null
-          is_active: boolean
+          is_active: boolean | null
         }
         Insert: {
-          id?: number
           key_name: string
           key_hash: string
-          permissions?: Json
-          rate_limit_per_hour?: number
+          permissions?: any | null
+          rate_limit_per_hour?: number | null
           created_at?: string
           last_used_at?: string | null
-          is_active?: boolean
+          is_active?: boolean | null
         }
         Update: {
-          id?: number
           key_name?: string
           key_hash?: string
-          permissions?: Json
-          rate_limit_per_hour?: number
+          permissions?: any | null
+          rate_limit_per_hour?: number | null
           created_at?: string
           last_used_at?: string | null
-          is_active?: boolean
+          is_active?: boolean | null
         }
         Relationships: []
       }
     }
-    Views: {}
-    Functions: {}
-    Enums: {}
-    CompositeTypes: {}
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      [_ in never]: never
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
   }
 }

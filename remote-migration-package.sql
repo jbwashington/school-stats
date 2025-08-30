@@ -1,0 +1,15 @@
+-- ============================================================================
+-- REMOTE DATABASE MIGRATION PACKAGE
+-- Purpose: Complete migration bundle for remote Supabase deployment
+-- Created: 2025-08-27
+-- ============================================================================
+-- 
+-- INSTRUCTIONS:
+-- 1. Copy this entire file
+-- 2. Go to your Supabase dashboard SQL editor
+-- 3. Paste and run this migration
+-- 4. Then run the data import scripts with remote credentials
+-- ============================================================================
+
+-- Step 1: Apply base tables migration
+-- ============================================================================

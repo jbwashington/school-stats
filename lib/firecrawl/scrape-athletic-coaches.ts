@@ -195,7 +195,7 @@ function validateAndCleanName(name: string): string | null {
   if (!name) return null;
   
   // Remove common prefixes and suffixes that get captured
-  let cleaned = name
+  const cleaned = name
     .replace(/^(The|A|An)\s+/i, '') // Remove articles
     .replace(/\s+(Coach|Coaching|Staff|Department|Athletics?)$/i, '') // Remove suffixes
     .replace(/^\s+|\s+$/g, '') // Trim whitespace
